@@ -69,11 +69,11 @@ export const SalesforceServices: React.FC = () => {
               <div className="w-full max-w-[631px] text-xl font-normal mt-4 max-md:max-w-full">
                 {features.map((feature, index) => (
                   <div key={index} className="flex w-full gap-2 flex-wrap mt-4 max-md:max-w-full">
-                    <img
+                    {/* <img
                       src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/3fd0a91ef727033d44541d5d457eaf974ddcfe94?placeholderIfAbsent=true"
                       alt="Check mark"
                       className="aspect-[1] object-contain w-6 shrink-0"
-                    />
+                    /> */}
                     <p className="text-[#FEFEFF] flex-1 shrink basis-[0%] max-md:max-w-full">
                       {feature}
                     </p>

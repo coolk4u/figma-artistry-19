@@ -49,9 +49,9 @@ export const Navigation: React.FC = () => {
             { name: 'Generative AI', href: '/services/generative-ai' },
             { name: 'DevOps', href: '/services/devops' },
             { name: 'Enablement and Training', href: '/services/enablement-training' },
-            { name: 'AWS', href: '/services/aws' },
+            // { name: 'AWS', href: '/services/aws' },
             { name: 'Experience Cloud', href: '/services/experience-cloud' },
-            { name: 'Einstein Analytics', href: '/services/einstein-analytics' },
+            // { name: 'Einstein Analytics', href: '/services/einstein-analytics' },
             { name: 'Financial Services Cloud', href: '/services/financial-services-cloud' }
           ]
         },
