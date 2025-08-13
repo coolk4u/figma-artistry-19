@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface EnquireButtonProps {
@@ -9,9 +10,10 @@ export const EnquireButton: React.FC<EnquireButtonProps> = ({ className = "", on
   return (
     <button
       onClick={onClick}
-      className={`flex items-center gap-2.5 text-base text-white font-semibold text-center leading-none justify-center px-12 py-3 rounded-3xl bg-gradient-to-r from-[#25A4DD] to-[#1487BB] hover:from-[#1487BB] hover:to-[#076C99] transition-all duration-300 ${className}`}
+      className={`group relative inline-flex items-center justify-center gap-2 text-sm font-semibold text-primary-foreground bg-primary hover:bg-primary/90 px-6 py-3 rounded-md transition-all duration-200 hover-lift overflow-hidden ${className}`}
     >
-      <span>Enquire Now</span>
+      <span className="relative z-10">Enquire Now</span>
+      <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
     </button>
   );
 };

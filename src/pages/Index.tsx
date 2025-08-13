@@ -13,23 +13,19 @@ import { Footer } from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="bg-white flex flex-col overflow-hidden items-stretch">
+    <div className="bg-background flex flex-col overflow-hidden items-stretch min-h-screen">
       <Navigation />
       <Hero />
       
-      <main>
+      <main className="flex-1">
         <About />
         <SalesforceServices />
         <Testimonials />
         
-        <section className="text-center mt-[77px] max-md:mt-10">
-          <h2 className="text-[#25a4dd] text-5xl font-medium self-center max-md:max-w-full max-md:text-[40px]">
-            From setup to scale.{" "}
-            <span className="text-[#003B55]">Salesforce done right</span>
-          </h2>
+        <section className="py-16 bg-background">
+          <ServicesGrid />
         </section>
         
-        <ServicesGrid />
         <PledgeSection />
         <NewsBlogs />
         <AIStrategy />

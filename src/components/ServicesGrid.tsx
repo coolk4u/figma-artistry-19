@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ServiceCard } from './ServiceCard';
 
@@ -67,21 +68,25 @@ export const ServicesGrid: React.FC = () => {
   ];
 
    return (
-    <section className="w-full mx-auto px-1 py-8">
-      <h1 className="text-xl font-bold text-center mb-6 text-[#212529]">
-        From setup to scale. Salesforce done right
-      </h1>
+    <section className="w-full max-w-7xl mx-auto px-6 py-16">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
+          From setup to scale.{" "}
+          <span className="gradient-text">Salesforce done right</span>
+        </h2>
+      </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            icon={service.icon}
-            title={service.title}
-            description={service.description}
-            features={features}
-            checkIcon={service.checkIcon}
-          />
+          <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            <ServiceCard
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+              features={features}
+              checkIcon={service.checkIcon}
+            />
+          </div>
         ))}
       </div>
     </section>
