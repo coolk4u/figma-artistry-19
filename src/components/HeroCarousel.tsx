@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
@@ -44,6 +45,30 @@ export const HeroCarousel: React.FC = () => {
     {
       name: "Analytics Cloud",
       icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/6730070567cbd160a0110dcd1f0e91379d0c5aed?placeholderIfAbsent=true"
+    },
+    {
+      name: "Financial Services",
+      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/f8d22255cc8512102cf1640ba84e07bfb9ab5ef2?placeholderIfAbsent=true"
+    },
+    {
+      name: "Data Cloud",
+      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/6730070567cbd160a0110dcd1f0e91379d0c5aed?placeholderIfAbsent=true"
+    },
+    {
+      name: "Health Cloud",
+      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/dbbed4497020afa2fcb104eaf38b7923f8bb9d83?placeholderIfAbsent=true"
+    },
+    {
+      name: "Manufacturing Cloud",
+      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/2e1e9387ab35ae9a2b45a5807fb7d32e5b708fa2?placeholderIfAbsent=true"
+    },
+    {
+      name: "Platform",
+      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/2e1e9387ab35ae9a2b45a5807fb7d32e5b708fa2?placeholderIfAbsent=true"
+    },
+    {
+      name: "MuleSoft",
+      icon: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mulesoft.svg"
     }
   ];
 
@@ -100,19 +125,19 @@ export const HeroCarousel: React.FC = () => {
       </div>
 
       {/* Salesforce Services Icons Section */}
-      <div className="bg-white py-8 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
+      <div className="bg-white py-6 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-center items-center gap-4 md:gap-6 lg:gap-8 flex-wrap">
             {salesforceServices.map((service, index) => (
               <div key={index} className="flex flex-col items-center group cursor-pointer">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden mb-2 group-hover:scale-105 transition-transform duration-300">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden mb-1 group-hover:scale-105 transition-transform duration-300">
                   <img
                     src={service.icon}
                     alt={service.name}
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <span className="text-sm md:text-base font-medium text-gray-700 text-center">
+                <span className="text-xs md:text-sm font-medium text-gray-700 text-center">
                   {service.name}
                 </span>
               </div>
