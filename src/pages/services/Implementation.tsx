@@ -1,36 +1,94 @@
 
 import React from 'react';
-import { ServicePageTemplate } from '@/components/ServicePageTemplate';
+import { Navigation } from '@/components/Navigation';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Implementation = () => {
   return (
-    <ServicePageTemplate
-      title="Salesforce Implementation"
-      subtitle="End-to-End Salesforce Deployment"
-      description="Transform your business with comprehensive Salesforce implementation services. From initial setup to go-live, we ensure your Salesforce platform is configured to meet your specific business needs."
-      image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80"
-      features={[
-        "Complete system configuration",
-        "Data migration and integration",
-        "Custom object and field creation",
-        "Workflow and automation setup",
-        "User training and onboarding",
-        "Testing and quality assurance",
-        "Go-live support",
-        "Post-implementation optimization"
-      ]}
-      benefits={[
-        "Faster implementation timeline",
-        "Reduced deployment risks",
-        "Seamless data migration",
-        "Optimized system performance",
-        "Enhanced user productivity" ,
-        "Improved data quality",
-        "Scalable foundation",
-        "Ongoing support and maintenance"
-      ]}
-      additionalInfo="Our implementation methodology follows Salesforce best practices to ensure your deployment is successful, on-time, and within budget. We focus on creating a solid foundation that supports your current needs while being flexible for future growth."
-    />
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
+      
+      <div className="pt-16">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-20">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-5xl font-bold mb-4">
+                  <span className="text-gray-800">Implementation</span>
+                </h1>
+                <h2 className="text-2xl text-blue-600 mb-6">End-to-End Salesforce Deployment</h2>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Transform your business with comprehensive Salesforce implementation services. From initial setup to go-live, we ensure your Salesforce platform is configured to meet your specific business needs.
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80" alt="Implementation" className="w-full max-w-md rounded-lg shadow-lg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Cards Section */}
+        <div className="container mx-auto px-6 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <Card className="bg-white shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg mb-3">Salesforce Configuration</h3>
+                <p className="text-gray-600 text-sm">Customization and Integration</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg mb-3">End-to-End Integration</h3>
+                <p className="text-gray-600 text-sm">System Integration Experience</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg mb-3">Complex Implementations</h3>
+                <p className="text-gray-600 text-sm">Proven capability to Deliver</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg mb-3">Domain Expertise</h3>
+                <p className="text-gray-600 text-sm">Deep industry knowledge</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Detailed Content */}
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Implementation Services</h3>
+                <ul className="space-y-3 text-gray-600">
+                  <li>• Salesforce Configuration, Customization and Integration</li>
+                  <li>• Extensive End-to-End System Integration Experience</li>
+                  <li>• Proven capability to Deliver Complex Implementations</li>
+                  <li>• Deep Domain expertise</li>
+                  <li>• Accelerated Time to Market</li>
+                  <li>• Rapid Implementation</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Our Approach</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Our implementation methodology follows Salesforce best practices to ensure your deployment is successful, on-time, and within budget. We focus on creating a solid foundation that supports your current needs while being flexible for future growth.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  We leverage proven frameworks and accelerators to reduce implementation time while maintaining quality and ensuring all customizations align with your business processes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
