@@ -26,7 +26,7 @@ export const Navigation: React.FC = () => {
             { name: 'Implementation', href: '/services/implementation' },
             { name: 'Salesforce Integration', href: '/services/salesforce-integration' },
             { name: 'Dev. & Customization', href: '/services/development-customization' },
-            { name: 'Lightning Migration', href: '/services/lightning-migration' },
+            { name: 'Staffing', href: '/services/staffing' },
             { name: 'Support & Maintenance', href: '/services/support-maintenance' }
           ]
         }
