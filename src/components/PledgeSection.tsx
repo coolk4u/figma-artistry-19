@@ -26,9 +26,7 @@ export const PledgeSection: React.FC = () => {
         <div className="w-6/12 max-md:w-full max-md:ml-0">
           <div className="flex w-full flex-col self-stretch items-stretch my-auto max-md:max-w-full max-md:mt-10">
             <h2 className="text-[#424950] text-2xl font-semibold max-md:max-w-full">
-              At 4CECloud Labs, we support the Pledge 1% movement by
-              committing 1% of our time and expertise to making a positive
-              impact.
+              At 4CECloud Labs, we drive the Pledge 1% forward by investing 1% of our skills and energy to build a better tomorrow.
             </h2>
             <div className="flex items-center gap-4 justify-center flex-wrap mt-[79px] max-md:max-w-full max-md:mt-10">
               {pledgeItems.map((item, index) => (

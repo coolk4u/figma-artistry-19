@@ -71,8 +71,8 @@ export const ServicesGrid: React.FC = () => {
     <section className="w-full max-w-7xl mx-auto px-6 py-16">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-          From setup to scale.{" "}
-          <span className="gradient-text">Salesforce done right</span>
+          Your Vision.{" "}
+          <span className="gradient-text">Our Salesforce Expertise.</span>
         </h2>
       </div>
       

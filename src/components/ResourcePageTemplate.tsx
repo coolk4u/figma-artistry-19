@@ -49,7 +49,7 @@ export const ResourcePageTemplate: React.FC<ResourcePageTemplateProps> = ({
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-60 object-cover"
                 />
                 <div className="p-6">
                   <p className="text-sm text-blue-600 mb-2">{item.date}</p>
@@ -57,7 +57,7 @@ export const ResourcePageTemplate: React.FC<ResourcePageTemplateProps> = ({
                   <p className="text-gray-600 mb-4">{item.description}</p>
                   {item.link && (
                     <a
-                      href={item.link}
+                      href={item.link} target='_blank'
                       className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
                     >
                       Read More
