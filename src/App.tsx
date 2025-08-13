@@ -13,7 +13,7 @@ import Consulting from "./pages/services/Consulting";
 import Implementation from "./pages/services/Implementation";
 import SalesforceIntegration from "./pages/services/SalesforceIntegration";
 import DevelopmentCustomization from "./pages/services/DevelopmentCustomization";
-import LightningMigration from "./pages/services/LightningMigration";
+import Staffing from "./pages/services/Staffing";
 import SupportMaintenance from "./pages/services/SupportMaintenance";
 
 // Salesforce Expertise
@@ -67,7 +67,7 @@ const App = () => (
           <Route path="/services/implementation" element={<Implementation />} />
           <Route path="/services/salesforce-integration" element={<SalesforceIntegration />} />
           <Route path="/services/development-customization" element={<DevelopmentCustomization />} />
-          <Route path="/services/lightning-migration" element={<LightningMigration />} />
+          <Route path="/services/staffing" element={<Staffing />} />
           <Route path="/services/support-maintenance" element={<SupportMaintenance />} />
           
           {/* Salesforce Expertise Routes */}
