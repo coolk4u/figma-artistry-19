@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -114,21 +113,21 @@ export const Navigation: React.FC = () => {
                       <NavigationMenuTrigger className="text-foreground/80 hover:text-foreground font-normal text-sm bg-transparent hover:bg-accent/50 px-3 py-2 rounded-md transition-all duration-200">
                         {item.name}
                       </NavigationMenuTrigger>
-                      <NavigationMenuContent className="bg-background/95 backdrop-blur-xl shadow-2xl rounded-lg p-6 min-w-[800px] z-50 border border-border/50">
+                      <NavigationMenuContent className="bg-background/95 backdrop-blur-xl shadow-2xl rounded-lg p-4 min-w-[800px] z-50 border border-border/50">
                         {item.sections ? (
-                          <div className="grid grid-cols-2 gap-8">
+                          <div className="grid grid-cols-2 gap-6">
                             {item.sections.map((section) => (
                               <div key={section.title}>
-                                <h3 className="font-semibold text-primary mb-4 text-xs uppercase tracking-wider">
+                                <h3 className="font-semibold text-primary mb-2 text-xs uppercase tracking-wider">
                                   {section.title}
                                 </h3>
-                                <ul className="space-y-3">
+                                <ul className="space-y-1">
                                   {section.items.map((subItem) => (
                                     <li key={subItem.name}>
                                       <NavigationMenuLink asChild>
                                         <Link
                                           to={subItem.href}
-                                          className="block text-sm text-foreground/70 hover:text-foreground hover:bg-accent/30 px-3 py-2 rounded-md transition-all duration-200 hover-lift"
+                                          className="block text-sm text-foreground/70 hover:text-foreground hover:bg-accent/30 px-3 py-1.5 rounded-md transition-all duration-200 hover-lift"
                                         >
                                           {subItem.name}
                                         </Link>
@@ -145,7 +144,7 @@ export const Navigation: React.FC = () => {
                               <NavigationMenuLink key={dropdownItem.name} asChild>
                                 <Link
                                   to={dropdownItem.href}
-                                  className="block px-4 py-3 text-sm text-foreground/70 hover:text-foreground hover:bg-accent/30 rounded-md transition-all duration-200"
+                                  className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent/30 rounded-md transition-all duration-200"
                                 >
                                   {dropdownItem.name}
                                 </Link>
