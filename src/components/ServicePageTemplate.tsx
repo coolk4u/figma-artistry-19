@@ -1,24 +1,34 @@
+
 import React from 'react';
 import { Navigation } from '@/components/Navigation';
+import { Card, CardContent } from '@/components/ui/card';
+
+interface ExpertiseCard {
+  icon: string;
+  title: string;
+  description: string;
+  bulletPoints: string[];
+}
+
 interface ServicePageTemplateProps {
   title: string;
   subtitle: string;
   description: string;
-  features: string[];
-  benefits: string[];
   image: string;
+  expertiseCards: ExpertiseCard[];
   additionalInfo?: string;
 }
+
 export const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   title,
   subtitle,
   description,
-  features,
-  benefits,
   image,
+  expertiseCards,
   additionalInfo
 }) => {
-  return <div className="min-h-screen bg-gray-50">
+  return (
+    <div className="min-h-screen bg-gray-50">
       <Navigation />
       
       <div className="pt-16">
@@ -42,51 +52,54 @@ export const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           </div>
         </div>
 
-        {/* Main Content */}
+        {/* Expertise Cards Section */}
         <div className="container mx-auto px-6 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Features Section */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Key Features</h3>
-              <ul className="space-y-4">
-                {features.map((feature, index) => <li key={index} className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span className="text-gray-600">{feature}</span>
-                  </li>)}
-              </ul>
-            </div>
-
-            {/* Benefits Section */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => <li key={index} className="flex items-start">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span className="text-gray-600">{benefit}</span>
-                  </li>)}
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {expertiseCards.map((card, index) => (
+              <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-2xl">{card.icon}</span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-orange-500">{card.title}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4 leading-relaxed">{card.description}</p>
+                  <ul className="space-y-2">
+                    {card.bulletPoints.map((point, pointIndex) => (
+                      <li key={pointIndex} className="flex items-start text-sm text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           {/* Additional Information */}
-          {additionalInfo && <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
+          {additionalInfo && (
+            <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Why Choose {title}?</h3>
               <p className="text-gray-600 leading-relaxed">
                 {additionalInfo}
               </p>
-            </div>}
+            </div>
+          )}
 
           {/* Call to Action */}
-          <div className="mt-12 text-center">
-            <div className="rounded-lg p-8 text-white bg-blue-950">
-              <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-              <p className="mb-6">Let our experts help you implement {title} for your business.</p>
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+          <div className="text-center">
+            <div className="rounded-lg p-12 text-white bg-blue-950">
+              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
+              <p className="mb-8 text-lg opacity-90">Let our experts help you implement {title} for your business.</p>
+              <button className="bg-white text-blue-600 px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors text-lg">
                 Contact Us Today
               </button>
             </div>
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
