@@ -19,7 +19,16 @@ const Implementation = () => {
         "Go-live support",
         "Post-implementation optimization"
       ]}
-     
+      benefits={[
+        "Faster implementation timeline",
+        "Reduced deployment risks",
+        "Seamless data migration",
+        "Optimized system performance",
+        "Enhanced user productivity" ,
+        "Improved data quality",
+        "Scalable foundation",
+        "Ongoing support and maintenance"
+      ]}
       additionalInfo="Our implementation methodology follows Salesforce best practices to ensure your deployment is successful, on-time, and within budget. We focus on creating a solid foundation that supports your current needs while being flexible for future growth."
     />
   );
