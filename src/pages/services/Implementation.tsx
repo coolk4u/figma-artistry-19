@@ -10,14 +10,14 @@ const Implementation = () => {
       description="Transform your business with comprehensive Salesforce implementation services. From initial setup to go-live, we ensure your Salesforce platform is configured to meet your specific business needs."
       image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80"
       features={[
-        "Complete system configuration",
-        "Data migration and integration",
-        "Custom object and field creation",
-        "Workflow and automation setup",
-        "User training and onboarding",
-        "Testing and quality assurance",
-        "Go-live support",
-        "Post-implementation optimization"
+        "Standard feature utilization to get the best out of the investment"
+"Tailored Salesforce setup, configuration, and cross-system integration"
+"Scalable architecture for complex and enterprise-grade rollouts"
+"Rapid Implementation Frameworks for quicker time-to-market"
+"Legacy modernization and seamless platform migrations"
+"Domain-aligned delivery using industry best practices"
+"Reusable accelerators and pre-built assets to jumpstart delivery"
+"DevOps-integrated agile execution"
       ]}
       benefits={[
         "Faster implementation timeline",
