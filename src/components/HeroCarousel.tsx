@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
@@ -125,19 +124,19 @@ export const HeroCarousel: React.FC = () => {
       </div>
 
       {/* Salesforce Services Icons Section */}
-      <div className="bg-white py-6 px-4">
+      <div className="bg-white py-4 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="flex justify-center items-center gap-4 md:gap-6 lg:gap-8 flex-wrap">
+          <div className="flex justify-center items-center gap-2 md:gap-3 lg:gap-4 flex-wrap">
             {salesforceServices.map((service, index) => (
               <div key={index} className="flex flex-col items-center group cursor-pointer">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden mb-1 group-hover:scale-105 transition-transform duration-300">
+                <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg overflow-hidden mb-1 group-hover:scale-105 transition-transform duration-300">
                   <img
                     src={service.icon}
                     alt={service.name}
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <span className="text-xs md:text-sm font-medium text-gray-700 text-center">
+                <span className="text-2xs md:text-xs font-medium text-gray-700 text-center">
                   {service.name}
                 </span>
               </div>
