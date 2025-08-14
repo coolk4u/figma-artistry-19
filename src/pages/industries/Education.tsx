@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ServicePageTemplate } from '@/components/ServicePageTemplate';
+import education from './industryimg/Education Solutions.jpg';
 
 const Education = () => {
   const expertiseCards = [
@@ -59,7 +60,7 @@ const Education = () => {
       title="Education Solutions"
       subtitle="Transforming Educational Experiences"
       description="Empower educational institutions with Salesforce solutions that improve student success, streamline operations, and enhance learning experiences from K-12 to higher education."
-      image="https://images.unsplash.com/photo-1523050854058-8df90110c9d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      image={education}
       expertiseCards={expertiseCards}
       additionalInfo="Our education industry expertise helps institutions build stronger relationships with students, faculty, and alumni. We deliver solutions that support the entire student journey while providing insights to improve educational outcomes and operational efficiency."
     />

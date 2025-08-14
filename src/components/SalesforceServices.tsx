@@ -33,7 +33,7 @@ export const SalesforceServices: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[rgba(42,50,132,1)] w-full overflow-hidden mt-8 px-20 py-[129px] max-md:max-w-full max-md:px-5 max-md:py-[100px]">
+    <section className="bg-[rgba(42,50,132,1)] w-full overflow-hidden mt-28 px-20 py-[50px] max-md:max-w-full max-md:px-5 max-md:py-[100px]">
       {/* Optimized services grid */}
       <div className="grid grid-cols-4 gap-6 w-full max-md:grid-cols-2 max-md:gap-4 max-sm:grid-cols-1">
         {services.map((service, index) => (

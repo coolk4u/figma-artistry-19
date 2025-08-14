@@ -41,18 +41,26 @@ export const Testimonials: React.FC = () => {
                   </h2>
                   <p className="text-[#828B94] text-base font-normal leading-6 mt-[22px] max-md:max-w-full">
                     We collaborate closely with clients to solve complex
-                    Salesforce challenges.Their success stories reflect our
+                    Salesforce challenges. Their success stories reflect our
                     commitment to quality and partnership.
                   </p>
                 </div>
-                <div className="flex items-center justify-between mt-4">
+                <div className="flex items-center mt-8">
                   {clientImages.map((image, index) => (
-                    <img
+                    <div 
                       key={index}
-                      src={image}
-                      alt={`Client ${index + 1}`}
-                      className="aspect-[1/1] object-contain w-12 self-stretch shrink-0 my-auto rounded-[50%]"
-                    />
+                      className="relative"
+                      style={{
+                        marginLeft: index > 0 ? '-10px' : '0',
+                        zIndex: clientImages.length - index
+                      }}
+                    >
+                      <img
+                        src={image}
+                        alt={`Client ${index + 1}`}
+                        className="w-16 h-16 rounded-full border-2 border-white object-cover"
+                      />
+                    </div>
                   ))}
                 </div>
                 <div className="bg-[#92DDFF] flex w-4 shrink-0 h-4 fill-[#92DDFF] ml-[97px] mt-[57px] rounded-[50%] max-md:ml-2.5 max-md:mt-10" />

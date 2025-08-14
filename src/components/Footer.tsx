@@ -1,4 +1,5 @@
 import React from 'react';
+import youtube from './Assets/Youtube logo.svg';
 
 export const Footer: React.FC = () => {
   const locations = [
@@ -23,11 +24,11 @@ export const Footer: React.FC = () => {
     { text: "Blogs", icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/decaf54c1a6bdc1542a29d8c66c6e2ae36108731?placeholderIfAbsent=true" }
   ];
 
-  const socialIcons = [
-    "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/dda4fb2f08faf30cbeeed0d156c661e0641c3211?placeholderIfAbsent=true",
-    "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/2feb42b1ba5e09e83bca0255e189e467f1f509b0?placeholderIfAbsent=true",
-    "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/50c017c363b3bdefd9175c08354e2060acb0bbf6?placeholderIfAbsent=true"
-  ];
+const socialIcons = [
+  "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/50c017c363b3bdefd9175c08354e2060acb0bbf6?placeholderIfAbsent=true",
+  "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/dda4fb2f08faf30cbeeed0d156c661e0641c3211?placeholderIfAbsent=true",
+  youtube
+];
 
   return (
     <footer className="bg-[rgba(6,43,85,1)] w-full overflow-hidden mt-4 pt-9 pb-[97px] px-20 max-md:max-w-full max-md:px-5">
