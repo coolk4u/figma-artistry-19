@@ -3,6 +3,30 @@ import React from 'react';
 import { Navigation } from '@/components/Navigation';
 
 const LifeAt4CE = () => {
+    const quickLinks = [
+  {
+    text: "Services",
+    icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/a1f0bf4659e1c7ec8b23a676c0a9e83733f77643?placeholderIfAbsent=true",
+  },
+  {
+    text: "Accelerators",
+    icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/a1f0bf4659e1c7ec8b23a676c0a9e83733f77643?placeholderIfAbsent=true",
+  },
+  {
+    text: "Case studies",
+    icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/a1f0bf4659e1c7ec8b23a676c0a9e83733f77643?placeholderIfAbsent=true",
+  },
+  {
+    text: "Blogs",
+    icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/decaf54c1a6bdc1542a29d8c66c6e2ae36108731?placeholderIfAbsent=true",
+  },
+];
+
+const socialIcons = [
+  "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/dda4fb2f08faf30cbeeed0d156c661e0641c3211?placeholderIfAbsent=true",
+  "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/2feb42b1ba5e09e83bca0255e189e467f1f509b0?placeholderIfAbsent=true",
+  "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/50c017c363b3bdefd9175c08354e2060acb0bbf6?placeholderIfAbsent=true",
+];
   const benefits = [
     {
       icon: "💼",
@@ -88,11 +112,27 @@ const LifeAt4CE = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="bg-blue-600 rounded-lg p-8 text-white text-center">
+          {/* <div className="bg-blue-600 rounded-lg p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">Ready to Join Our Team?</h3>
             <p className="mb-6">Explore exciting career opportunities and be part of our growing success story.</p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
               View Open Positions
+            </button>
+          </div> */}
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="bg-blue-950 text-white w-full mx-auto">
+        <div className="text-center bg-blue-950 p-[5vh] text-white rounded-lg max-w-[1351px] w-[90vw] mx-auto">
+          <div className="pt-5">
+            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-lg mb-6">
+              Let our experts help you implement Development & Customization for
+              your business.
+            </p>
+            <button className="bg-white text-blue-600 px-10 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors text-lg">
+              Contact Us Today
             </button>
           </div>
         </div>

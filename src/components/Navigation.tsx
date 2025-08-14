@@ -73,7 +73,7 @@ export const Navigation: React.FC = () => {
       href: '#',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Press Releases', href: '/resources/press-releases' },
+        // { name: 'Press Releases', href: '/resources/press-releases' },
         { name: 'Case Studies', href: '/resources/case-studies' },
         { name: 'Blog', href: '/resources/blog' },
         { name: 'Videos', href: '/resources/videos' }
@@ -87,20 +87,20 @@ export const Navigation: React.FC = () => {
         { name: 'About Us', href: '/about-us' },
         { name: 'Our Team', href: '/about-us/our-team' },
         { name: 'Our Customers', href: '/about-us/our-customers' },
-        { name: 'Life at 4CE Cloud Labs', href: '/about-us/life-at-4ce' }
+        { name: 'Life at 4CECloud Labs', href: '/about-us/life-at-4ce' }
       ]
     }
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border/50 h-[90px]">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
             <img
               src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/ec04a159b9b6d80af3b88ba7dc27df8a838dafac?placeholderIfAbsent=true"
               alt="4CE Cloud Labs"
-              className="h-10 w-auto"
+              className="h-15 w-auto pt-5"
             />
           </Link>
 

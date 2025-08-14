@@ -8,6 +8,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+import slide1 from './Assets/slider 1.png';
+import slide2 from './Assets/slider 2.png';
+
 export const HeroCarousel: React.FC = () => {
   const slides = [
     {
@@ -15,13 +18,15 @@ export const HeroCarousel: React.FC = () => {
       subtitle:
         "Backed by certified experts delivering enterprise-grade results",
       image:
-        "https://ik.imagekit.io/DebajyotiG/4CECLoud%20Lab%20Dummy%20Website/1.jpg?updatedAt=1754054330797",
+        // "https://ik.imagekit.io/DebajyotiG/4CECLoud%20Lab%20Dummy%20Website/1.jpg?updatedAt=1754054330797",
+        slide1,
     },
     {
       title: "Trusted Salesforce Implementation",
       subtitle: "Salesforce implementation and innovation",
       image:
-        "https://ik.imagekit.io/DebajyotiG/4CECLoud%20Lab%20Dummy%20Website/2.jpg?updatedAt=1754054330580",
+        // "https://ik.imagekit.io/DebajyotiG/4CECLoud%20Lab%20Dummy%20Website/2.jpg?updatedAt=1754054330580",
+        slide2,
     },
     {
       title: "Digital Transformation Excellence",
@@ -141,10 +146,10 @@ export const HeroCarousel: React.FC = () => {
       </div>
 
       {/* Salesforce Services Icons Section */}
-      <div className="bg-white py-6 md:py-8 px-4 mt-6 mb-6 md:mt-10 md:mb-12">
-        <div className="max-w-7xl mx-auto">
+      {/* <div className="bg-white py-6 md:py-8 px-4 mt-6 mb-6 md:mt-10 md:mb-12">
+        <div className="max-w-7xl mx-auto"> */}
           {/* Mobile: 4 columns grid */}
-          <div className="grid grid-cols-4 gap-3 md:hidden">
+          {/* <div className="grid grid-cols-4 gap-3 md:hidden">
             {salesforceServices.map((service, index) => (
               <div
                 key={index}
@@ -162,10 +167,10 @@ export const HeroCarousel: React.FC = () => {
                 </span>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Desktop: Single row */}
-          <div className="hidden md:flex justify-center items-center gap-4 lg:gap-6 flex-wrap">
+          {/* <div className="hidden md:flex justify-center items-center gap-4 lg:gap-6 flex-wrap">
             {salesforceServices.map((service, index) => (
               <div
                 key={index}
@@ -185,7 +190,7 @@ export const HeroCarousel: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

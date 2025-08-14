@@ -251,8 +251,8 @@ const Accelerators = () => {
       )}
 
       {/* Footer */}
-      <div className="pb-16">
-        <div className="text-center bg-blue-950 p-[6vh] text-white rounded-lg max-w-[1351px] w-[90vw] mx-auto">
+      <div className="bg-blue-950 text-white w-full mx-auto">
+        <div className="text-center bg-blue-950 p-[5vh] text-white rounded-lg max-w-[1351px] w-[90vw] mx-auto">
           <div className="pt-5">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-lg mb-6">
