@@ -1,4 +1,5 @@
 import React from 'react';
+import clients from './Assets/Press Releases.jpg';
 
 export const Testimonials: React.FC = () => {
   const testimonials = [
@@ -30,23 +31,23 @@ export const Testimonials: React.FC = () => {
     <section className="w-full overflow-hidden bg-[#FEFEFF] mt-6 pt-[100px] pb-5 px-20 max-md:max-w-full max-md:px-5">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
         <div className="w-6/12 max-md:w-full max-md:ml-0">
-          <div className="flex w-full flex-col items-stretch mt-1 max-md:max-w-full max-md:mt-10">
-            <div className="bg-[rgba(255,194,71,1)] flex w-8 shrink-0 h-8 ml-[86px] rounded-[50%] max-md:ml-2.5" />
-            <div className="bg-[#1487BB] w-[165px] shrink-0 h-1 mt-[81px] border-[rgba(20,135,187,1)] border-solid border-4 max-md:mt-10" />
+          {/* <div className="flex w-full flex-col items-stretch mt-1 max-md:max-w-full max-md:mt-10"> */}
+            {/* <div className="bg-[rgba(255,194,71,1)] flex w-8 shrink-0 h-8 ml-[86px] rounded-[50%] max-md:ml-2.5" /> */}
+            {/* <div className="bg-[#1487BB] w-[165px] shrink-0 h-1 mt-[81px] border-[rgba(20,135,187,1)] border-solid border-4 max-md:mt-10" /> */}
             <div className="flex items-stretch flex-wrap mt-[76px] max-md:mt-10">
               <div className="flex w-fit flex-col grow shrink-0 basis-0 max-md:max-w-full">
                 <div className="self-stretch max-md:max-w-full">
-                  <h2 className="text-[#424950] text-5xl font-bold max-md:max-w-full max-md:text-[40px]">
+                  <h2 className="text-[#424950] text-5xl font-bold max-md:max-w-full max-md:text-[40px] mt-[-100px]">
                     What Our Clients Are Saying
                   </h2>
-                  <p className="text-[#828B94] text-base font-normal leading-6 mt-[22px] max-md:max-w-full">
+                  <p className="text-[#828B94] text-base font-normal leading-6 mt-[22px] max-md:max-w-full pb-5">
                     We collaborate closely with clients to solve complex
                     Salesforce challenges. Their success stories reflect our
                     commitment to quality and partnership.
                   </p>
                 </div>
-                <div className="flex items-center mt-8">
-                  {clientImages.map((image, index) => (
+                {/* <div className="flex items-center mt-8"> */}
+                  {/* {clientImages.map((image, index) => (
                     <div 
                       key={index}
                       className="relative"
@@ -61,14 +62,16 @@ export const Testimonials: React.FC = () => {
                         className="w-16 h-16 rounded-full border-2 border-white object-cover"
                       />
                     </div>
-                  ))}
-                </div>
+                  ))} */}
+
+                {/* </div> */}
+                  <img src={clients} alt="" />
                 <div className="bg-[#92DDFF] flex w-4 shrink-0 h-4 fill-[#92DDFF] ml-[97px] mt-[57px] rounded-[50%] max-md:ml-2.5 max-md:mt-10" />
               </div>
               <div className="bg-[#E3E9EE] flex w-4 shrink-0 h-4 fill-[#E3E9EE] mt-[338px] rounded-[50%] max-md:mt-10" />
             </div>
             <div className="bg-[#1487BB] self-center flex w-8 shrink-0 h-8 fill-[#1487BB] ml-[26px] mt-[17px] rounded-[50%]" />
-          </div>
+          {/* </div> */}
         </div>
         <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0">
           <div className="flex w-full flex-col items-stretch max-md:max-w-full max-md:mt-10">
@@ -101,11 +104,11 @@ export const Testimonials: React.FC = () => {
               <div className="bg-[#3AC2FF] flex w-8 shrink-0 h-8 fill-[#3AC2FF] mt-[100px] rounded-[50%] max-md:mt-10" />
             </div>
             
-            {testimonials.slice(1).map((testimonial, index) => (
-              <article
-                key={index}
-                className={`items-stretch flex w-full flex-col bg-[#F7FBFF] ${index === 0 ? 'mr-3 mt-10' : 'mt-[47px]'} px-12 py-6 rounded-lg max-md:max-w-full max-md:mr-2.5 ${index === 0 ? 'max-md:mt-10' : 'max-md:mt-10'} max-md:px-5`}
-              >
+{testimonials.slice(1).map((testimonial, index) => (
+  <article
+    key={index}
+    className={`items-stretch flex w-full flex-col bg-[#F7FBFF] ${index === 0 ? 'mr-3 mt-4' : 'mt-4'} px-12 py-6 rounded-lg max-md:max-w-full max-md:mr-2.5 max-md:px-5`}
+  >
                 <div className="flex items-center gap-2 text-xl text-[#003B55] font-semibold text-center">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/d93563c3e5c6c3972d0b83ef3dba9fc6b1422abe?placeholderIfAbsent=true"
