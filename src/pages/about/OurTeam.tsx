@@ -1,20 +1,22 @@
 
 import React from 'react';
 import { Navigation } from '@/components/Navigation';
+import pic1 from './aboutprofileimage/Kumar photo.jpeg';
+import pic2 from './aboutprofileimage/Kuldeep Photo.jpeg';
 
 const OurTeam = () => {
   const teamMembers = [
     {
-      name: "John Smith",
+      name: "Naresh Kumar Golla",
       role: "CEO & Founder",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-      bio: "Salesforce MVP with 15+ years of experience in digital transformation and cloud solutions."
+      image: pic1,
+      bio: "Founder & CEO of 4CECloud Labs | Digital Transformation Leader | 18+ Years Driving Innovation in CRM & CX | Global Speaker | Mentor to 1500+ Professionals | Passionate About Tech, Growth & Empowering Businesses with Salesforce & Oracle Solutions."
     },
     {
-      name: "Sarah Johnson",
-      role: "CTO",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b8c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80",
-      bio: "Technical architect specializing in complex Salesforce implementations and integrations."
+      name: "Kuldeep Dhiman",
+      role: "Director",
+      image: pic2,
+      bio: "18+ years transforming enterprises with Salesforce, Oracle CX, CPQ & ServiceNow. Led 60+ projects, mentored 50+ professionals, and driven $M+ deals. Digital transformation leader delivering seamless integrations, strategic growth, and unmatched client success."
     },
     {
       name: "Michael Chen",
@@ -66,7 +68,7 @@ const OurTeam = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-96 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
