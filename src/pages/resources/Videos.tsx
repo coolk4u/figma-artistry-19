@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ResourcePageTemplate } from '@/components/ResourcePageTemplate';
+import mainphoto from './resourceimg/video main photo.png';
 
 const Videos = () => {
   const videos = [
@@ -54,6 +55,7 @@ const Videos = () => {
       subtitle="Visual Learning & Demonstrations"
       description="Access our library of educational videos, product demonstrations, and expert tutorials to enhance your Salesforce knowledge and skills."
       items={videos}
+      mainPhoto={mainphoto}
     />
   );
 };

@@ -33,24 +33,25 @@ export const SalesforceServices: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[rgba(42,50,132,1)] w-full overflow-hidden mt-28 px-20 py-[50px] max-md:max-w-full max-md:px-5 max-md:py-[100px]">
-      {/* Optimized services grid */}
-      <div className="grid grid-cols-4 gap-6 w-full max-md:grid-cols-2 max-md:gap-4 max-sm:grid-cols-1">
+    <section className="bg-[rgba(42,50,132,1)] w-full px-4 sm:px-6 py-12 md:py-16 lg:py-20">
+      {/* Services grid */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {services.map((service, index) => (
           <article
             key={index}
-            className="bg-[rgba(254,254,255,0.1)] border flex flex-col items-center justify-center h-[220px] w-full px-4 py-6 rounded-lg border-[rgba(254,254,255,0.2)] border-solid"
+            className="bg-[rgba(254,254,255,0.1)] border flex flex-col items-center justify-center min-h-[220px] w-full px-4 py-6 rounded-lg border-[rgba(254,254,255,0.2)] border-solid hover:bg-[rgba(254,254,255,0.15)] transition-colors duration-300"
           >
             <div className="flex flex-col items-center w-full">
               <img
                 src={service.icon}
                 alt={service.title}
                 className="w-10 h-10 object-contain mb-4"
+                loading="lazy"
               />
-              <h3 className="text-[#FEFEFF] text-xl font-medium text-center">
+              <h3 className="text-[#FEFEFF] text-lg sm:text-xl font-medium text-center">
                 {service.title}
               </h3>
-              <p className="text-[#EBF9FF] text-sm font-semibold mt-2 text-center">
+              <p className="text-[#EBF9FF] text-sm sm:text-base font-semibold mt-2 text-center">
                 {service.description}
               </p>
             </div>
@@ -58,23 +59,18 @@ export const SalesforceServices: React.FC = () => {
         ))}
       </div>
       
-      {/* Rest of your content remains unchanged */}
-      <div className="mb-[-25px] mt-12 max-md:max-w-full max-md:mt-10 max-md:mb-2.5">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-          <div className="w-6/12 max-md:w-full max-md:ml-0">
-            <div className="grow text-[#FEFEFF] max-md:max-w-full max-md:mt-10">
-              <h2 className="text-[#FEFEFF] text-[40px] font-semibold leading-[1.2] max-md:max-w-full">
+      {/* Bottom content */}
+      <div className="max-w-7xl mx-auto mt-12 md:mt-16">
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="lg:w-1/2">
+            <div className="text-[#FEFEFF]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-[1.2]">
                 Salesforce Services
               </h2>
-              <div className="w-full max-w-[631px] text-xl font-normal mt-4 max-md:max-w-full">
+              <div className="mt-6 space-y-4">
                 {features.map((feature, index) => (
-                  <div key={index} className="flex w-full gap-2 flex-wrap mt-4 max-md:max-w-full">
-                    {/* <img
-                      src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/3fd0a91ef727033d44541d5d457eaf974ddcfe94?placeholderIfAbsent=true"
-                      alt="Check mark"
-                      className="aspect-[1] object-contain w-6 shrink-0"
-                    /> */}
-                    <p className="text-[#FEFEFF] flex-1 shrink basis-[0%] max-md:max-w-full">
+                  <div key={index} className="flex items-start gap-3">
+                    <p className="text-[#FEFEFF] text-base sm:text-lg">
                       {feature}
                     </p>
                   </div>
@@ -82,23 +78,20 @@ export const SalesforceServices: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0">
-            <article className="bg-[rgba(254,254,255,0.1)] border flex min-h-[266px] grow flex-col items-stretch text-center justify-center w-full mt-2.5 px-7 py-[55px] rounded-lg border-[rgba(254,254,255,0.2)] border-solid max-md:max-w-full max-md:mt-10 max-md:px-5">
-              <div className="flex w-full flex-col items-stretch max-md:max-w-full">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/d593021b75049b88fc9b7e103201a5c4e619d288?placeholderIfAbsent=true"
-                  alt="Strategic Consulting"
-                  className="aspect-[1] object-contain w-12 self-center"
-                />
-                <div className="w-full mt-4 max-md:max-w-full">
-                  <h3 className="text-[#FEFEFF] text-2xl font-medium max-md:max-w-full">
-                    Strategic Consulting
-                  </h3>
-                  <p className="text-[#EBF9FF] text-base font-semibold mt-2 max-md:max-w-full">
-                    Shaping Salesforce strategies that align with business goals & drive transformation
-                  </p>
-                </div>
-              </div>
+          <div className="lg:w-1/2">
+            <article className="bg-[rgba(254,254,255,0.1)] border flex flex-col items-center justify-center min-h-[266px] w-full p-6 md:p-8 rounded-lg border-[rgba(254,254,255,0.2)] border-solid hover:bg-[rgba(254,254,255,0.15)] transition-colors duration-300">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/d593021b75049b88fc9b7e103201a5c4e619d288?placeholderIfAbsent=true"
+                alt="Strategic Consulting"
+                className="w-12 h-12 object-contain mb-4"
+                loading="lazy"
+              />
+              <h3 className="text-[#FEFEFF] text-2xl font-medium text-center">
+                Strategic Consulting
+              </h3>
+              <p className="text-[#EBF9FF] text-base font-semibold mt-2 text-center">
+                Shaping Salesforce strategies that align with business goals & drive transformation
+              </p>
             </article>
           </div>
         </div>
