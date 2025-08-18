@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   NavigationMenu,
@@ -11,8 +11,30 @@ import {
 
 export const Navigation: React.FC = () => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [expandedItem, setExpandedItem] = useState<string | null>(null);
 
-  const navItems = [
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setExpandedItem(null);
+  }, [location]);
+
+  // Add scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleItem = (itemName: string) => {
+    setExpandedItem(expandedItem === itemName ? null : itemName);
+  };
+
+const navItems = [
     { name: 'Home', href: '/' },
     { 
       name: 'Services', 
@@ -49,9 +71,7 @@ export const Navigation: React.FC = () => {
             { name: 'Generative AI', href: '/services/generative-ai' },
             { name: 'DevOps', href: '/services/devops' },
             { name: 'Enablement and Training', href: '/services/enablement-training' },
-            // { name: 'AWS', href: '/services/aws' },
             { name: 'Experience Cloud', href: '/services/experience-cloud' },
-            // { name: 'Einstein Analytics', href: '/services/einstein-analytics' },
             { name: 'Financial Services Cloud', href: '/services/financial-services-cloud' }
           ]
         },
@@ -73,7 +93,6 @@ export const Navigation: React.FC = () => {
       href: '#',
       hasDropdown: true,
       dropdownItems: [
-        // { name: 'Press Releases', href: '/resources/press-releases' },
         { name: 'Case Studies', href: '/resources/case-studies' },
         { name: 'Blog', href: '/resources/blog' },
         { name: 'Videos', href: '/resources/videos' }
@@ -93,81 +112,183 @@ export const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border/50 h-[90px]">
-      <div className="container mx-auto px-6">
+    <nav className={`fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border/50 h-[75px] transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/ec04a159b9b6d80af3b88ba7dc27df8a838dafac?placeholderIfAbsent=true"
-              alt="4CE Cloud Labs"
-              className="h-15 w-auto pt-5"
-            />
-          </Link>
+          <div className="flex items-center justify-between w-full md:w-auto">
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/ec04a159b9b6d80af3b88ba7dc27df8a838dafac?placeholderIfAbsent=true"
+                alt="4CE Cloud Labs"
+                className="h-14 w-auto pt-3"
+              />
+            </Link>
 
-          <NavigationMenu>
-            <NavigationMenuList className="flex space-x-1">
-              {navItems.map((item) => (
-                <NavigationMenuItem key={item.name}>
-                  {item.hasDropdown ? (
-                    <>
-                      <NavigationMenuTrigger className="text-foreground/80 hover:text-foreground font-normal text-sm bg-transparent hover:bg-accent/50 px-3 py-2 rounded-md transition-all duration-200">
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="inline-flex items-center justify-center p-2 rounded-md text-foreground/80 hover:text-foreground focus:outline-none"
+                aria-expanded={isMobileMenuOpen}
+              >
+                <span className="sr-only">Open main menu</span>
+                {!isMobileMenuOpen ? (
+                  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                ) : (
+                  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Desktop Navigation - Keep this exactly as is */}
+          <div className="hidden md:block">
+            <NavigationMenu>
+              <NavigationMenuList className="flex space-x-1">
+                {navItems.map((item) => (
+                  <NavigationMenuItem key={item.name}>
+                    {item.hasDropdown ? (
+                      <>
+                        <NavigationMenuTrigger className="text-foreground/80 hover:text-foreground font-normal text-sm bg-transparent hover:bg-accent/50 px-3 py-2 rounded-md transition-all duration-200">
+                          {item.name}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent className="bg-background/95 backdrop-blur-xl shadow-2xl rounded-lg p-4 min-w-[800px] z-50 border border-border/50">
+                          {item.sections ? (
+                            <div className="grid grid-cols-2 gap-6">
+                              {item.sections.map((section) => (
+                                <div key={section.title}>
+                                  <h3 className="font-semibold text-primary mb-2 text-xs uppercase tracking-wider">
+                                    {section.title}
+                                  </h3>
+                                  <ul className="space-y-1">
+                                    {section.items.map((subItem) => (
+                                      <li key={subItem.name}>
+                                        <NavigationMenuLink asChild>
+                                          <Link
+                                            to={subItem.href}
+                                            className="block text-sm text-foreground/70 hover:text-foreground hover:bg-accent/30 px-3 py-1.5 rounded-md transition-all duration-200 hover-lift"
+                                          >
+                                            {subItem.name}
+                                          </Link>
+                                        </NavigationMenuLink>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <div className="min-w-[200px]">
+                              {item.dropdownItems?.map((dropdownItem) => (
+                                <NavigationMenuLink key={dropdownItem.name} asChild>
+                                  <Link
+                                    to={dropdownItem.href}
+                                    className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent/30 rounded-md transition-all duration-200"
+                                  >
+                                    {dropdownItem.name}
+                                  </Link>
+                                </NavigationMenuLink>
+                              ))}
+                            </div>
+                          )}
+                        </NavigationMenuContent>
+                      </>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        className={`text-foreground/80 hover:text-foreground font-normal text-sm px-3 py-2 rounded-md transition-all duration-200 ${
+                          location.pathname === item.href ? 'bg-accent text-foreground' : 'hover:bg-accent/50'
+                        }`}
+                      >
                         {item.name}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent className="bg-background/95 backdrop-blur-xl shadow-2xl rounded-lg p-4 min-w-[800px] z-50 border border-border/50">
-                        {item.sections ? (
-                          <div className="grid grid-cols-2 gap-6">
-                            {item.sections.map((section) => (
-                              <div key={section.title}>
-                                <h3 className="font-semibold text-primary mb-2 text-xs uppercase tracking-wider">
-                                  {section.title}
-                                </h3>
-                                <ul className="space-y-1">
-                                  {section.items.map((subItem) => (
-                                    <li key={subItem.name}>
-                                      <NavigationMenuLink asChild>
-                                        <Link
-                                          to={subItem.href}
-                                          className="block text-sm text-foreground/70 hover:text-foreground hover:bg-accent/30 px-3 py-1.5 rounded-md transition-all duration-200 hover-lift"
-                                        >
-                                          {subItem.name}
-                                        </Link>
-                                      </NavigationMenuLink>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          <div className="min-w-[200px]">
-                            {item.dropdownItems?.map((dropdownItem) => (
-                              <NavigationMenuLink key={dropdownItem.name} asChild>
-                                <Link
-                                  to={dropdownItem.href}
-                                  className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent/30 rounded-md transition-all duration-200"
-                                >
-                                  {dropdownItem.name}
-                                </Link>
-                              </NavigationMenuLink>
-                            ))}
-                          </div>
-                        )}
-                      </NavigationMenuContent>
-                    </>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`text-foreground/80 hover:text-foreground font-normal text-sm px-3 py-2 rounded-md transition-all duration-200 ${
-                        location.pathname === item.href ? 'bg-accent text-foreground' : 'hover:bg-accent/50'
+                      </Link>
+                    )}
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background/95 backdrop-blur-xl border-t border-border/50 max-h-[calc(100vh-90px)] overflow-y-auto">
+          {navItems.map((item) => (
+            <div key={item.name} className="px-2">
+              {item.hasDropdown ? (
+                <div className="mb-2">
+                  <button
+                    onClick={() => toggleItem(item.name)}
+                    className={`w-full text-left text-foreground/80 hover:text-foreground font-normal text-sm px-3 py-2 rounded-md transition-all duration-200 flex justify-between items-center ${
+                      location.pathname === item.href ? 'bg-accent text-foreground' : 'hover:bg-accent/50'
+                    }`}
+                  >
+                    {item.name}
+                    <svg
+                      className={`w-4 h-4 ml-2 transition-transform duration-200 ${
+                        expandedItem === item.name ? 'transform rotate-180' : ''
                       }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      {item.name}
-                    </Link>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {expandedItem === item.name && (
+                    <div className="pl-4 mt-1 space-y-1">
+                      {item.sections ? (
+                        item.sections.map((section) => (
+                          <div key={section.title} className="mb-3">
+                            <h3 className="font-semibold text-primary mb-2 text-xs uppercase tracking-wider">
+                              {section.title}
+                            </h3>
+                            <ul className="space-y-1">
+                              {section.items.map((subItem) => (
+                                <li key={subItem.name}>
+                                  <Link
+                                    to={subItem.href}
+                                    className="block text-sm text-foreground/70 hover:text-foreground hover:bg-accent/30 px-3 py-1.5 rounded-md transition-all duration-200"
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))
+                      ) : (
+                        item.dropdownItems?.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="block text-sm text-foreground/70 hover:text-foreground hover:bg-accent/30 px-3 py-1.5 rounded-md transition-all duration-200"
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))
+                      )}
+                    </div>
                   )}
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+                </div>
+              ) : (
+                <Link
+                  to={item.href}
+                  className={`block text-foreground/80 hover:text-foreground font-normal text-sm px-3 py-2 rounded-md transition-all duration-200 ${
+                    location.pathname === item.href ? 'bg-accent text-foreground' : 'hover:bg-accent/50'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </nav>

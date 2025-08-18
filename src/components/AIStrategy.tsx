@@ -35,84 +35,47 @@ export const AIStrategy: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white z-10 flex mt-[-23px] w-full flex-col overflow-hidden items-center text-sm px-20 py-[43px] max-md:max-w-full max-md:px-5">
+    <section className="bg-white z-10 w-full flex flex-col items-center px-4 py-10 sm:px-6 md:px-8 lg:px-20 xl:px-24">
       <div className="flex items-center gap-2 text-[#25A4DD] font-normal">
         <img
           src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/0bf5f221ca8c27c9d4e36fade8f0809cb2db6023?placeholderIfAbsent=true"
           alt="AI Strategy icon"
-          className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
+          className="w-6 h-6 object-contain"
         />
-        <span className="text-[#25A4DD] self-stretch my-auto">
-          AI Strategy & Managed Solutions
-        </span>
+        <span>AI Strategy & Managed Solutions</span>
       </div>
-      <h2 className="text-4xl font-medium leading-[48px] text-center ml-[18px] mt-[25px] max-md:max-w-full">
-        From blueprint to breakthrough we embed AI into your operations with
-        precision scalability and impact
+      
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium leading-tight text-center mt-6 max-w-4xl mx-auto">
+        From blueprint to breakthrough we embed AI into your operations with precision scalability and impact
       </h2>
-      <div className="flex w-full max-w-[1238px] flex-col items-stretch mt-[49px] max-md:max-w-full max-md:mt-10">
-        <div className="flex w-full items-center flex-wrap max-md:max-w-full">
-          {aiFeatures.slice(0, 3).map((feature, index) => (
-            <article
-              key={index}
-              className="items-stretch self-stretch flex min-w-60 min-h-[252px] flex-col grow shrink w-[330px] bg-[#FEFEFF] my-auto px-4 py-[17px] border-l-[#E3E9EE] border-[rgba(227,233,238,1)] border-l border-solid"
-            >
-              <div className="items-stretch flex flex-col text-[#003B55] font-medium justify-center bg-[#EBF9FF] p-2">
-                <h3 className="text-[#003B55]">
-                  {feature.title}
-                </h3>
-              </div>
-              <div className="relative flex w-full flex-col text-[#6C757D] font-normal leading-[22px] mt-4">
-                <div 
-                  className="absolute z-0 min-h-[49px] w-0 left-[-18px] top-[-70px] h-[49px] border-solid border-[6px]"
-                  style={{ 
-                    backgroundColor: feature.borderColor,
-                    borderColor: feature.borderColor
-                  }}
-                />
-                <img
-                  src={feature.icon}
-                  alt={feature.title}
-                  className="aspect-[1] object-contain w-[70px] z-0 rounded-[34px]"
-                />
-                <p className="text-[#6C757D] self-stretch z-0 mt-2">
-                  {feature.description}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="flex items-center flex-wrap mt-6 max-md:max-w-full">
-          {aiFeatures.slice(3, 5).map((feature, index) => (
-            <article
-              key={index + 3}
-              className="items-stretch self-stretch flex min-w-60 min-h-[252px] flex-col w-[412px] bg-[#FEFEFF] my-auto pt-4 pb-[39px] px-4 border-l-[#E3E9EE] border-[rgba(227,233,238,1)] border-l border-solid"
-            >
-              <div className="items-stretch flex flex-col text-[#003B55] font-medium justify-center bg-[#EBF9FF] p-2">
-                <h3 className="text-[#003B55]">
-                  {feature.title}
-                </h3>
-              </div>
-              <div className="relative flex w-full flex-col text-[#6C757D] font-normal leading-[22px] mt-4">
-                <div 
-                  className="absolute z-0 min-h-[49px] w-0 left-[-18px] top-[-70px] h-[49px] border-solid border-[6px]"
-                  style={{ 
-                    backgroundColor: feature.borderColor,
-                    borderColor: feature.borderColor
-                  }}
-                />
-                <img
-                  src={feature.icon}
-                  alt={feature.title}
-                  className="aspect-[1] object-contain w-[70px] z-0"
-                />
-                <p className="text-[#6C757D] self-stretch z-0 mt-2">
-                  {feature.description}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
+      
+      <div className="w-full max-w-6xl mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {aiFeatures.map((feature, index) => (
+          <article
+            key={index}
+            className="bg-[#FEFEFF] p-4 border-l border-[#E3E9EE] relative min-h-[252px]"
+          >
+            <div 
+              className="absolute left-0 top-0 h-full w-1"
+              style={{ backgroundColor: feature.borderColor }}
+            />
+            <div className="bg-[#EBF9FF] p-2 mb-4">
+              <h3 className="text-[#003B55] font-medium">
+                {feature.title}
+              </h3>
+            </div>
+            <div className="flex flex-col">
+              <img
+                src={feature.icon}
+                alt={feature.title}
+                className="w-16 h-16 object-contain rounded-full mb-3"
+              />
+              <p className="text-[#6C757D] leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

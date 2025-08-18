@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ResourcePageTemplate } from '@/components/ResourcePageTemplate';
 import { CaseStudyModal } from './CaseStudyModal';
+import mainphoto from './resourceimg/Main Photo.webp';
 import case1 from './resourceimg/Case1.png';
 import case2 from './resourceimg/Case2.png';
 import case3 from './resourceimg/Case3.png';
@@ -184,6 +185,7 @@ const CaseStudies = () => {
         subtitle="Success Stories & Client Transformations"
         description="Explore real-world examples of how 4CE Cloud Labs has helped organizations achieve their digital transformation goals through innovative Salesforce solutions."
         items={resourceItems}
+        mainPhoto={mainphoto} // Add this line to pass the main photo
       />
       {isModalOpen && selectedCaseStudy && (
         <CaseStudyModal
@@ -194,5 +196,4 @@ const CaseStudies = () => {
     </>
   );
 };
-
 export default CaseStudies;

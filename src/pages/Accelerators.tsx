@@ -1,9 +1,10 @@
 import React from "react";
 import { Navigation } from "@/components/Navigation";
 import { useState } from "react";
-import pic1 from "./acceleratorsimg/DataMBA.png";
-import pic2 from "./acceleratorsimg/Optimax.png";
-import pic3 from "./acceleratorsimg/DMS365.png";
+import pic1 from "./acceleratorsimg/Main Photo.jpg";
+import pic2 from "./acceleratorsimg/DataMBA.png";
+import pic3 from "./acceleratorsimg/Optimax.png";
+import pic4 from "./acceleratorsimg/DMS365.png";
 
 const Accelerators = () => {
   const [selectedAccelerator, setSelectedAccelerator] = useState(null);
@@ -31,7 +32,7 @@ const Accelerators = () => {
         "Parallel & scheduled jobs",
         "Continuous integration",
       ],
-      img: pic1,
+      img: pic2,
       details: [
         "Configure routine data interfaces leveraging data integration framework.",
         "Ready-made jobs to import metadata/configurations such as products, price books etc.",
@@ -51,7 +52,7 @@ const Accelerators = () => {
         "Customization Optimization",
         "Code Quality improvements​",
       ],
-      img: pic2,
+      img: pic3,
       details: [
         "Comprehensive Salesforce Health Check – Identify performance, security, and code quality gaps with detailed diagnostics.",
         "Security Vulnerability Remediation – Fix weaknesses in password policies, user management, and session settings to safeguard data.",
@@ -70,7 +71,7 @@ const Accelerators = () => {
         "Real-Time Sales & Inventory Dashboards",
         "Automated Schemes & Claims",
       ],
-      img: pic3,
+      img: pic4,
       details: [
         "End-to-End Distribution Management – Streamline ordering, inventory, billing, and returns across distributors, dealers, and retailers.",
         "Omnichannel Partner Engagement – Self-service web and mobile portals for order placement, stock visibility, claims, and scheme tracking.",
@@ -87,22 +88,39 @@ const Accelerators = () => {
 
       <div className="pt-16">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-20">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl font-bold mb-4">
-              <span className="text-gray-800">Accelerators and </span>
-              <span className="text-blue-500">App Solutions</span>
-            </h1>
+        <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-12 md:py-16 lg:py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="text-center lg:text-left order-last lg:order-first">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
+                  <span className="text-gray-800">Accelerators and </span>
+                  <span className="text-blue-500">App Solutions</span>
+                </h1>
+                <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                  We leverage our in-house built accelerators and frameworks,
+                  powered by our Center of Excellence (COE), to deliver successful
+                  engagements across Implementations, Managed Services, and
+                  Consulting.
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <img
+                  src={pic1}
+                  alt="Accelerators and App Solutions"
+                  className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-lg shadow-lg object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Main Content */}
-        <div className="container mx-auto px-6 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-blue-600 mb-4 underline">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-3 md:mb-4 underline">
               Accelerators
             </h2>
-            <p className="text-gray-600 max-w-4xl mx-auto">
+            <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto">
               We leverage our in-house built accelerators and frameworks,
               powered by our Center of Excellence (COE), to deliver successful
               engagements across Implementations, Managed Services, and
@@ -110,36 +128,36 @@ const Accelerators = () => {
             </p>
           </div>
 
-          {/* First Row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Accelerators Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
             {accelerators.map((accelerator, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
                 <div className="bg-gradient-to-r from-blue-400 to-blue-600 h-2"></div>
-                <div className="p-6">
-                  <div className="text-4xl mb-4 text-center">
+                <div className="p-4 sm:p-6">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 text-center">
                     {accelerator.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">
                     {accelerator.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">
                     {accelerator.description}
                   </p>
 
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-800 mb-2">
+                  <div className="mb-3 sm:mb-4">
+                    <h4 className="font-semibold text-gray-800 text-sm sm:text-base mb-1 sm:mb-2">
                       Key Features
                     </h4>
                     <ul className="space-y-1">
                       {accelerator.keyFeatures.map((feature, idx) => (
                         <li
                           key={idx}
-                          className="flex items-center text-sm text-gray-600"
+                          className="flex items-center text-xs sm:text-sm text-gray-600"
                         >
-                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-1 sm:mr-2"></span>
                           {feature}
                         </li>
                       ))}
@@ -148,7 +166,7 @@ const Accelerators = () => {
 
                   <button
                     onClick={() => openModal(accelerator)}
-                    className="w-full bg-blue-500 text-white py-2 rounded-full hover:bg-blue-600 transition-colors"
+                    className="w-full bg-blue-500 text-white py-1 sm:py-2 rounded-full hover:bg-blue-600 transition-colors text-xs sm:text-sm"
                   >
                     More Features
                   </button>
@@ -162,15 +180,15 @@ const Accelerators = () => {
       {/* Modal */}
       {isModalOpen && selectedAccelerator && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg shadow-xl w-full max-w-5xl max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-lg shadow-xl w-full max-w-4xl lg:max-w-5xl max-h-[90vh] overflow-y-auto">
             <div className="bg-gradient-to-r from-blue-400 to-blue-600 h-2"></div>
-            <div className="p-6">
-              <div className="flex justify-between items-start mb-4">
+            <div className="p-4 sm:p-6">
+              <div className="flex justify-between items-start mb-3 sm:mb-4">
                 <div className="flex items-center">
-                  <div className="text-4xl mr-4">
+                  <div className="text-3xl sm:text-4xl mr-3 sm:mr-4">
                     {selectedAccelerator.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
                     {selectedAccelerator.title}
                   </h3>
                 </div>
@@ -180,7 +198,7 @@ const Accelerators = () => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
+                    className="h-5 w-5 sm:h-6 sm:w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -195,33 +213,33 @@ const Accelerators = () => {
                 </button>
               </div>
 
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 md:gap-8">
                 {/* Left side - Text content */}
                 <div className="lg:w-1/2">
-                  <p className="text-gray-600 mb-6 max-w-2xl">
+                  <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6 max-w-2xl">
                     {selectedAccelerator.description}
                   </p>
 
                   {/* Mobile-only image */}
-                  <div className="lg:hidden mb-6 flex justify-center">
+                  <div className="lg:hidden mb-4 sm:mb-6 flex justify-center">
                     <img
                       src={selectedAccelerator.img}
                       alt={selectedAccelerator.title}
-                      className="max-h-60 w-auto object-contain rounded-lg shadow-md"
+                      className="max-h-48 sm:max-h-60 w-auto object-contain rounded-lg shadow-md"
                     />
                   </div>
 
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-800 mb-3 text-lg">
+                  <div className="mb-4 sm:mb-6">
+                    <h4 className="font-semibold text-gray-800 text-sm sm:text-base md:text-lg mb-2 sm:mb-3">
                       Detailed Features
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-1 sm:space-y-2">
                       {selectedAccelerator.details.map((detail, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start text-gray-600"
+                          className="flex items-start text-xs sm:text-sm text-gray-600"
                         >
-                          <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-1.5 sm:mt-2 mr-1.5 sm:mr-2 flex-shrink-0"></span>
                           <span>{detail}</span>
                         </li>
                       ))}
@@ -234,14 +252,14 @@ const Accelerators = () => {
                   <img
                     src={selectedAccelerator.img}
                     alt={selectedAccelerator.title}
-                    className="max-h-80 w-auto object-contain rounded-lg shadow-md"
+                    className="max-h-64 md:max-h-80 w-auto object-contain rounded-lg shadow-md"
                   />
                 </div>
               </div>
 
               <button
                 onClick={closeModal}
-                className="w-full mt-6 bg-blue-500 text-white py-2 rounded-full hover:bg-blue-600 transition-colors"
+                className="w-full mt-4 sm:mt-6 bg-blue-500 text-white py-1 sm:py-2 rounded-full hover:bg-blue-600 transition-colors text-sm sm:text-base"
               >
                 Close
               </button>
@@ -251,15 +269,17 @@ const Accelerators = () => {
       )}
 
       {/* Footer */}
-      <div className="bg-blue-950 text-white w-full mx-auto">
-        <div className="text-center bg-blue-950 p-[5vh] text-white rounded-lg max-w-[1351px] w-[90vw] mx-auto">
-          <div className="pt-5">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-lg mb-6">
+      <div className="bg-blue-950 text-white w-full">
+        <div className="text-center bg-blue-950 p-6 sm:p-[5vh] text-white rounded-lg max-w-6xl w-[90vw] mx-auto">
+          <div className="pt-3 sm:pt-5">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-base sm:text-lg mb-4 sm:mb-6">
               Let our experts help you implement Development & Customization for
               your business.
             </p>
-            <button className="bg-white text-blue-600 px-10 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors text-lg">
+            <button className="bg-white text-blue-600 px-6 sm:px-10 py-2 sm:py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors text-base sm:text-lg">
               Contact Us Today
             </button>
           </div>

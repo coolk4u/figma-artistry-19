@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
@@ -8,189 +8,99 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import slide1 from './Assets/slider 1.png';
-import slide2 from './Assets/slider 2.png';
+import slide1 from "./Assets/slider 1.png";
+import slide2 from "./Assets/slider 2.png";
 
-export const HeroCarousel: React.FC = () => {
-  const slides = [
-    {
-      title: "Proud Salesforce Partner",
-      subtitle:
-        "Backed by certified experts delivering enterprise-grade results",
-      image:
-        // "https://ik.imagekit.io/DebajyotiG/4CECLoud%20Lab%20Dummy%20Website/1.jpg?updatedAt=1754054330797",
-        slide1,
-    },
-    {
-      title: "Trusted Salesforce Implementation",
-      subtitle: "Salesforce implementation and innovation",
-      image:
-        // "https://ik.imagekit.io/DebajyotiG/4CECLoud%20Lab%20Dummy%20Website/2.jpg?updatedAt=1754054330580",
-        slide2,
-    },
-    {
-      title: "Digital Transformation Excellence",
-      subtitle: "Leading cloud solutions for modern businesses",
-      image:
-        "https://ik.imagekit.io/DebajyotiG/4CECLoud%20Lab%20Dummy%20Website/3.jpg?updatedAt=1754054330503",
-    },
-  ];
 
-  const salesforceServices = [
-    {
-      name: "Sales Cloud",
-      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/3266e8ba0888c0a2567696236d844368701cc8f9?placeholderIfAbsent=true",
-    },
-    {
-      name: "Service Cloud",
-      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/ab8d7b283ae7d99d86e3646e6390fa17a9677b1e?placeholderIfAbsent=true",
-    },
-    {
-      name: "Marketing Cloud",
-      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/761ab0561f15041345be8ceacae839ebaa5d95d6?placeholderIfAbsent=true",
-    },
-    {
-      name: "Agentforce",
-      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/cb9b1af083adf2a31c8c8ce3965555a34b3cda69?placeholderIfAbsent=true",
-    },
-    {
-      name: "Experience Cloud",
-      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/dba01bf6d130e026b8276bc752fe1e3af67ae836?placeholderIfAbsent=true",
-    },
-    // {
-    //   name: "Analytics Cloud",
-    //   icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/6730070567cbd160a0110dcd1f0e91379d0c5aed?placeholderIfAbsent=true",
-    // },
-    {
-      name: "Financial Services",
-      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/f8d22255cc8512102cf1640ba84e07bfb9ab5ef2?placeholderIfAbsent=true",
-    },
-    {
-      name: "Data Cloud",
-      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/6730070567cbd160a0110dcd1f0e91379d0c5aed?placeholderIfAbsent=true",
-    },
-    {
-      name: "Health Cloud",
-      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/dbbed4497020afa2fcb104eaf38b7923f8bb9d83?placeholderIfAbsent=true",
-    },
-    {
-      name: "Manufacturing Cloud",
-      icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/2e1e9387ab35ae9a2b45a5807fb7d32e5b708fa2?placeholderIfAbsent=true",
-    },
-    // {
-    //   name: "Platform",
-    //   icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/2e1e9387ab35ae9a2b45a5807fb7d32e5b708fa2?placeholderIfAbsent=true",
-    // },
-    {
-      name: "MuleSoft",
-      icon: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mulesoft.svg",
-    },
-  ];
-
-  return (
-    <div className="relative w-full bg-gradient-to-br h-[550px] max-md:h-[400px] pt-16">
-      {/* Main Carousel */}
-      <div className="relative h-[500px] max-md:h-[400px]">
-        <Carousel
-          className="w-full h-full"
-          plugins={[Autoplay({ delay: 2000 })]}
-          opts={{
-            loop: true,
-          }}
-        >
-          <CarouselContent>
-            {slides.map((slide, index) => (
-              <CarouselItem key={index}>
-                <div className="relative w-full h-[550px] max-md:h-[400px]">
-                  {/* Background Image */}
-                  <div
-                    className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
-                    style={{
-                      backgroundImage: `url(${slide.image})`,
-                    }}
-                  />
-                  {/* Dark overlay */}
-                  <div className="absolute inset-0 bg-black/50 z-10" />
-
-                  {/* Text Content */}
-                  <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-center text-white max-w-4xl px-6 z-20">
-                    <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-tight">
-                      {slide.title}
-                    </h1>
-                    <p className="text-sm md:text-lg lg:text-xl mb-6 font-light">
-                      {slide.subtitle}
-                    </p>
-                    <button className="bg-white text-blue-900 px-6 md:px-8 py-2 md:py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors text-sm md:text-base">
-                      Send Inquiry
-                    </button>
+  const HeroCarousel: React.FC = () => {
+    const slides = [
+      {
+        title: "Proud Salesforce Partner",
+        subtitle:
+          "Backed by certified experts delivering enterprise-grade results",
+        image: slide1,
+      },
+      {
+        title: "Trusted Salesforce Implementation",
+        subtitle: "Salesforce implementation and innovation",
+        image: slide2,
+      },
+      {
+        title: "Digital Transformation Excellence",
+        subtitle: "Leading cloud solutions for modern businesses",
+        image:
+          "https://ik.imagekit.io/DebajyotiG/4CECLoud%20Lab%20Dummy%20Website/3.jpg?updatedAt=1754054330503",
+      },
+    ];
+  
+    return (
+      <div className="relative w-full bg-gradient-to-br h-[calc(100vh-20px)] min-h-[400px] max-h-[800px] pt-16 md:pt-20">
+        {/* Main Carousel */}
+        <div className="relative h-full">
+          <Carousel
+            className="w-full h-full"
+            plugins={[
+              Autoplay({
+                delay: 2000,
+                stopOnInteraction: false, // Prevents stopping when user clicks/swipes
+                stopOnMouseEnter: false, // Prevents stopping when mouse hovers
+                stopOnFocusIn: false, // Prevents stopping when focused (keyboard navigation)
+              }),
+            ]}
+            opts={{
+              loop: true,
+            }}
+          >
+            <CarouselContent>
+              {slides.map((slide, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative w-full h-[calc(100vh-110px)] min-h-[400px] max-h-[800px]">
+                    {/* Background Image */}
+                    <div
+                      className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
+                      style={{
+                        backgroundImage: `url(${slide.image})`,
+                      }}
+                    />
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-black/50 z-10" />
+  
+                    {/* Text Content - Responsive positioning and sizing */}
+                    <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 sm:px-6 md:px-8 z-20 max-w-6xl mx-auto">
+                      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
+                        {slide.title}
+                      </h1>
+                      <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 font-light max-w-2xl mx-auto">
+                        {slide.subtitle}
+                      </p>
+                      <button className="bg-white text-blue-900 px-6 py-2 sm:px-8 sm:py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors text-sm sm:text-base">
+                        Send Inquiry
+                      </button>
+                    </div>
+  
+                    {/* Carousel indicators */}
+                    <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
+                      {slides.map((_, i) => (
+                        <div
+                          key={i}
+                          className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                            i === index ? "bg-white scale-125" : "bg-white/50"
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </div>
-
-                  {/* Carousel indicators */}
-                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
-                    {slides.map((_, i) => (
-                      <div
-                        key={i}
-                        className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
-                          i === index ? "bg-white" : "bg-white/50"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 z-40 w-8 h-8 md:w-10 md:h-10" />
-          <CarouselNext className="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 z-40 w-8 h-8 md:w-10 md:h-10" />
-        </Carousel>
-      </div>
-
-      {/* Salesforce Services Icons Section */}
-      {/* <div className="bg-white py-6 md:py-8 px-4 mt-6 mb-6 md:mt-10 md:mb-12">
-        <div className="max-w-7xl mx-auto"> */}
-          {/* Mobile: 4 columns grid */}
-          {/* <div className="grid grid-cols-4 gap-3 md:hidden">
-            {salesforceServices.map((service, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center group cursor-pointer"
-              >
-                <div className="w-6 h-6 rounded-lg overflow-hidden mb-1 group-hover:scale-105 transition-transform duration-300">
-                  <img
-                    src={service.icon}
-                    alt={service.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <span className="text-[10px] font-medium text-gray-700 text-center leading-tight">
-                  {service.name}
-                </span>
-              </div>
-            ))}
-          </div> */}
-
-          {/* Desktop: Single row */}
-          {/* <div className="hidden md:flex justify-center items-center gap-4 lg:gap-6 flex-wrap">
-            {salesforceServices.map((service, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center group cursor-pointer"
-              >
-                <div className="w-7 h-7 lg:w-8 lg:h-8 rounded-lg overflow-hidden mb-2 group-hover:scale-105 transition-transform duration-300">
-                  <img
-                    src={service.icon}
-                    alt={service.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <span className="text-xs lg:text-sm font-medium text-gray-700 text-center">
-                  {service.name}
-                </span>
-              </div>
-            ))}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            {/* Navigation Arrows - Responsive sizing and positioning */}
+            <CarouselPrevious className="absolute left-2 sm:left-4 md:left-8 top-1/2 transform -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 z-40 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+            <CarouselNext className="absolute right-2 sm:right-4 md:right-8 top-1/2 transform -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 z-40 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+          </Carousel>
         </div>
-      </div> */}
-    </div>
-  );
-};
+      </div>
+    );
+  };
+  
+  export default HeroCarousel;
+
