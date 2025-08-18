@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ResourcePageTemplate } from '@/components/ResourcePageTemplate';
+import { Navigation } from '@/components/Navigation';
 import { CaseStudyModal } from './CaseStudyModal';
 import mainphoto from './resourceimg/Main Photo.webp';
 import case1 from './resourceimg/Case1.png';
@@ -8,7 +8,7 @@ import case3 from './resourceimg/Case3.png';
 
 interface CaseStudyItem {
   title: string;
-  img: string; // Added image field
+  img: string;
   overview: {
     description: string;
     keyHighlights: string[];
@@ -29,7 +29,7 @@ const CaseStudies = () => {
   const caseStudies: CaseStudyItem[] = [
     {
       "title": "Salesforce Implementation – MYK Laticrete",
-      "img": case1, // Add your actual image URL
+      "img": case1,
       "overview": {
         "description": "Digitally transformed sales operations for MYK Laticrete, India, enabling real-time visibility, improved efficiency, and stronger distributor/retailer engagement.",
         "keyHighlights": [
@@ -73,7 +73,7 @@ const CaseStudies = () => {
     },
     {
       "title": "Financial Services Cloud Implementation",
-      "img": case2, // Add your actual image URL
+      "img": case2,
       "overview": {
         "description": "Revolutionized mobile and portal banking experience for a leading bank, enabling digital-first customer engagement and operational efficiency.",
         "keyHighlights": [
@@ -121,7 +121,7 @@ const CaseStudies = () => {
     },
     {
       "title": "Salesforce Implementation – Wiley",
-      "img": case3, // Add your actual image URL
+      "img": case3,
       "overview": {
         "description": "Digitally streamlined service operations and contract lifecycle management for Wiley, enabling faster time-to-market, improved agent productivity, and seamless partner onboarding.",
         "keyHighlights": [
@@ -170,30 +170,107 @@ const CaseStudies = () => {
     setIsModalOpen(true);
   };
 
-  const resourceItems = caseStudies.map((caseStudy) => ({
-    title: caseStudy.title,
-    description: caseStudy.overview.description,
-    date: "", // Add actual date if available
-    image: caseStudy.img, // Using the img from caseStudy
-    onClick: () => handleReadMore(caseStudy)
-  }));
-
   return (
-    <>
-      <ResourcePageTemplate
-        title="Case Studies"
-        subtitle="Success Stories & Client Transformations"
-        description="Explore real-world examples of how 4CE Cloud Labs has helped organizations achieve their digital transformation goals through innovative Salesforce solutions."
-        items={resourceItems}
-        mainPhoto={mainphoto} // Add this line to pass the main photo
-      />
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      <Navigation />
+
+      <main className="flex-grow pt-16">
+        {/* Hero Section */}
+        <section className="w-full px-4 py-8 sm:py-12 bg-gradient-to-br from-white to-blue-200">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
+            {/* Mobile Image - shown on all screens except desktop */}
+            <div className="lg:hidden w-full flex justify-center mb-4 sm:mb-6">
+              <img
+                src={mainphoto}
+                alt="Main header"
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto rounded-lg object-cover"
+              />
+            </div>
+
+            <div className="lg:w-2/3 w-full">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-800">
+                Case Studies
+              </h1>
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-600 mb-3 sm:mb-4">
+                Success Stories & Client Transformations
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+                Explore real-world examples of how 4CE Cloud Labs has helped organizations achieve their digital transformation goals through innovative Salesforce solutions.
+              </p>
+            </div>
+
+            {/* Desktop Image - hidden on mobile */}
+            <div className="hidden lg:block lg:w-1/3">
+              <img
+                src={mainphoto}
+                alt="Main header"
+                className="w-full max-w-md h-auto rounded-lg object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Content Grid */}
+        <section className="w-full px-4 py-8 sm:py-12">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {caseStudies.map((caseStudy, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
+                >
+                  <img
+                    src={caseStudy.img}
+                    alt={caseStudy.title}
+                    className="w-full h-48 sm:h-56 object-cover"
+                  />
+                  <div className="p-4 sm:p-6 flex-grow flex flex-col">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">
+                      {caseStudy.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6 flex-grow">
+                      {caseStudy.overview.description}
+                    </p>
+                    <button
+                      onClick={() => handleReadMore(caseStudy)}
+                      className="w-full sm:w-auto text-center bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full hover:bg-blue-700 transition-colors text-sm sm:text-base"
+                    >
+                      Read More
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-blue-950 text-white w-full">
+        <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto">
+              Let our experts help you implement Development & Customization for
+              your business.
+            </p>
+            <button className="bg-white text-blue-600 px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors text-base sm:text-lg">
+              Contact Us Today
+            </button>
+          </div>
+        </div>
+      </footer>
+
       {isModalOpen && selectedCaseStudy && (
         <CaseStudyModal
           caseStudy={selectedCaseStudy}
           onClose={() => setIsModalOpen(false)}
         />
       )}
-    </>
+    </div>
   );
 };
+
 export default CaseStudies;
