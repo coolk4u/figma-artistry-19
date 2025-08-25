@@ -5,15 +5,15 @@ export const Testimonials: React.FC = () => {
   const testimonials = [
     {
       type: "primary",
-      date: "Jan 9, 2025",
+      date: "Jun 27, 2025",
       content:
-        "4CE Cloud Labs continue to be an excellent partner to Wiley from the initial scoping and design discussions through to the implementation and support of our latest project. We couldn't have asked for a better team to undertake some of our key roadmap initiatives.",
+        "We had the pleasure of working with 4CECloud Labs on the Agentforce project, and the experience exceeded our expectations. Their team demonstrated deep technical expertise and a strong understanding of Salesforce architecture, enabling them to build intelligent and highly functional agents tailored to the business needs. 4CECloud Labs team was responsive, innovative, and we are thoroughly impressed with their expertise and professionalism.",
     },
     {
       type: "secondary",
-      date: "Jan 3, 2024",
+      date: "Jan 9, 2025",
       content:
-        "4CE Cloud Labs have excelled in our dealings with them and provided us with a great team, which augments our own internal SFDC team members, and has made it a very strong team delivering quality solutions and ensuring our org runs smoothly as possible.",
+        "4CE Cloud Labs continue to be an excellent partner to Wiley from the initial scoping and design discussions through to the implementation and support of our latest project. We couldn't have asked for a better team to undertake some of our key roadmap initiatives.",
     },
     {
       type: "secondary",
@@ -51,7 +51,7 @@ export const Testimonials: React.FC = () => {
         {/* Right Side - Testimonials (50% width) */}
         <div className="lg:w-1/2 flex flex-col gap-6">
           {/* Primary Testimonial */}
-          <article className="shadow-[0_4px_32px_16px_rgba(20,135,187,0.20)] bg-[#1487BB] text-[#FEFEFF] p-6 rounded-lg">
+          <article className="shadow-[0_4px_32px_16px_rgba(20,135,187,0.20)] bg-[rgba(42,50,132,1)] text-[#FEFEFF] p-6 rounded-lg">
             <div className="flex items-center gap-2 text-xl font-semibold mb-4">
               <img
                 src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/2ce24b766170ca02b6a042409db924d75342b9a2?placeholderIfAbsent=true"
@@ -75,7 +75,7 @@ export const Testimonials: React.FC = () => {
           <div className="flex flex-col gap-4">
             {testimonials.slice(1).map((testimonial, index) => (
               <article key={index} className="bg-[#F7FBFF] p-4 rounded-lg">
-                <div className="flex items-center gap-2 text-xl text-[#003B55] font-semibold mb-4">
+                <div className="flex items-center gap-2 text-xl text-[rgba(42,50,132,1)] font-semibold mb-4">
                   <img
                     src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/d93563c3e5c6c3972d0b83ef3dba9fc6b1422abe?placeholderIfAbsent=true"
                     alt="Salesforce verified"

@@ -145,15 +145,15 @@ const navItems = [
             </div>
           </div>
 
-          {/* Desktop Navigation - Keep this exactly as is */}
+          {/* Desktop Navigation - Updated with consistent dimensions */}
           <div className="hidden md:block">
             <NavigationMenu>
               <NavigationMenuList className="flex space-x-1">
                 {navItems.map((item) => (
-                  <NavigationMenuItem key={item.name}>
+                  <NavigationMenuItem key={item.name} className="flex">
                     {item.hasDropdown ? (
                       <>
-                        <NavigationMenuTrigger className="text-foreground/80 hover:text-foreground font-normal text-sm bg-transparent hover:bg-accent/50 px-3 py-2 rounded-md transition-all duration-200">
+                        <NavigationMenuTrigger className="text-foreground/100 hover:text-foreground font-normal text-sm bg-transparent hover:bg-accent/50 px-4 py-3 rounded-md transition-all duration-200 h-10 flex items-center justify-center min-w-[120px]">
                           {item.name}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent className="bg-background/95 backdrop-blur-xl shadow-2xl rounded-lg p-4 min-w-[800px] z-50 border border-border/50">
@@ -200,7 +200,7 @@ const navItems = [
                     ) : (
                       <Link
                         to={item.href}
-                        className={`text-foreground/80 hover:text-foreground font-normal text-sm px-3 py-2 rounded-md transition-all duration-200 ${
+                        className={`text-foreground/100 hover:text-foreground font-normal text-sm px-4 py-3 rounded-md transition-all duration-200 h-10 flex items-center justify-center min-w-[120px] ${
                           location.pathname === item.href ? 'bg-accent text-foreground' : 'hover:bg-accent/50'
                         }`}
                       >
@@ -224,7 +224,7 @@ const navItems = [
                 <div className="mb-2">
                   <button
                     onClick={() => toggleItem(item.name)}
-                    className={`w-full text-left text-foreground/80 hover:text-foreground font-normal text-sm px-3 py-2 rounded-md transition-all duration-200 flex justify-between items-center ${
+                    className={`w-full text-left text-foreground/80 hover:text-foreground font-normal text-sm px-4 py-3 rounded-md transition-all duration-200 flex justify-between items-center h-10 ${
                       location.pathname === item.href ? 'bg-accent text-foreground' : 'hover:bg-accent/50'
                     }`}
                   >
@@ -280,7 +280,7 @@ const navItems = [
               ) : (
                 <Link
                   to={item.href}
-                  className={`block text-foreground/80 hover:text-foreground font-normal text-sm px-3 py-2 rounded-md transition-all duration-200 ${
+                  className={`block text-foreground/80 hover:text-foreground font-normal text-sm px-4 py-3 rounded-md transition-all duration-200 h-10 ${
                     location.pathname === item.href ? 'bg-accent text-foreground' : 'hover:bg-accent/50'
                   }`}
                 >
