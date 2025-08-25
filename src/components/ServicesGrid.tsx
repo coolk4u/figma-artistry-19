@@ -40,7 +40,7 @@ export const ServicesGrid: React.FC = () => {
         "Omnichannel Case Management",
         "Assistance via Einstein Bots",
         "Knowledge & Experience Cloud Portals",
-        "Real-Time Performance Insights",
+        "Real-Time Service KPIs",
       ],
       checkIcon:
         "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/fd87ee58a5cd8a1f51cd2e2b0f12007bdfeb359b?placeholderIfAbsent=true",
@@ -53,7 +53,7 @@ export const ServicesGrid: React.FC = () => {
       features: [
         "Guided Selling & Product Configuration",
         "Automated Quote Generation",
-        "Subscription & Contract Management ",
+        "Assets & Contract Management ",
         "Revenue Recognition & Billing",
       ],
       checkIcon:
@@ -126,9 +126,9 @@ export const ServicesGrid: React.FC = () => {
   return (
     <section className="w-full mx-auto px-4 sm:px-6 py-12 md:py-16 lg:py-20">
       <div className="text-center mb-8 md:mb-12 lg:mb-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
-          Your Vision.{" "}
-          <span className="gradient-text">Our Salesforce Expertise.</span>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+          {/* Your Vision.{" "} */}
+          <span className="text-[rgba(42,50,132,1)]">Our Salesforce Expertise.</span>
         </h2>
       </div>
 

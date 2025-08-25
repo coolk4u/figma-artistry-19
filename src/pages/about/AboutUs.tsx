@@ -58,7 +58,7 @@ const AboutUs = () => {
               <h1 className="text-3xl md:text-5xl font-bold mb-4 text-gray-800">
                 About 4CE Cloud Labs
               </h1>
-              <h2 className="text-xl md:text-2xl text-blue-600 mb-6">
+              <h2 className="text-xl md:text-2xl text-[rgba(42,50,132,1)] mb-6">
                 Driving Digital Transformation
               </h2>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed">
@@ -78,7 +78,7 @@ const AboutUs = () => {
             <div className="flex flex-col md:flex-row gap-8 md:gap-12">
               <div className="w-full md:w-[45%]">
                 <div className="flex flex-col">
-                  <div className="flex items-center gap-2 text-base font-normal text-[#25A4DD]">
+                  <div className="flex items-center gap-2 text-base font-normal text-[rgba(42,50,132,1)]">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/53675d9d267b9fbcd82d937050f2504182f0bfa9?placeholderIfAbsent=true"
                       alt="Company icon"
@@ -88,7 +88,7 @@ const AboutUs = () => {
                   </div>
                   <h1 className="text-3xl md:text-5xl font-semibold mt-6">
                     <span className="text-[#003B55]">Who Are </span>
-                    <span className="text-[#25A4DD]">We</span>
+                    <span className="text-[rgba(42,50,132,1)]">We</span>
                   </h1>
                   <div className="text-[#4b545d] text-base md:text-lg font-normal leading-7 mt-4 space-y-4">
                     <p>
@@ -114,7 +114,7 @@ const AboutUs = () => {
                     </p>
                   </div>
                   <div className="mt-6">
-                    <button className="rounded-3xl bg-blue-500 p-3 pr-7 pl-7 text-white font-semibold">
+                    <button className="rounded-3xl bg-[rgba(42,50,132,1)] p-3 pr-7 pl-7 text-white font-semibold">
                       Enquire Now
                     </button>
                   </div>
@@ -176,7 +176,7 @@ const AboutUs = () => {
             <div className="flex flex-col md:flex-row gap-8 md:gap-12">
               <div className="w-full md:w-6/12">
                 <div className="flex flex-col">
-                  <h2 className="text-[#424950] text-xl md:text-2xl font-semibold">
+                  <h2 className="text-[rgba(42,50,132,1)] text-xl md:text-2xl font-semibold">
                     At 4CECloud Labs, we drive the Pledge 1% forward by
                     investing 1% of our skills and energy to build a better
                     tomorrow.
@@ -203,7 +203,7 @@ const AboutUs = () => {
                     ))}
                   </div>
                   <p className="text-[#424950] text-base font-medium leading-6 mt-8 md:mt-16">
-                    <span className="text-[#005277]">
+                    <span className="text-[rgba(42,50,132,1)]">
                       We believe that technology can be a force for good
                     </span>
                     —and that starts with access and opportunity. By sharing our
@@ -227,7 +227,7 @@ const AboutUs = () => {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
-              <h4 className="text-lg md:text-xl font-bold text-gray-800 mb-3">
+              <h4 className="text-lg md:text-xl font-bold text-[rgba(42,50,132,1)] mb-3">
                 Our Vision
               </h4>
               <p className="text-gray-600 text-sm md:text-base">
@@ -240,7 +240,7 @@ const AboutUs = () => {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⭐</span>
               </div>
-              <h4 className="text-lg md:text-xl font-bold text-gray-800 mb-3">
+              <h4 className="text-lg md:text-xl font-bold text-[rgba(42,50,132,1)] mb-3">
                 Our Values
               </h4>
               <p className="text-gray-600 text-sm md:text-base">
@@ -253,7 +253,7 @@ const AboutUs = () => {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
               </div>
-              <h4 className="text-lg md:text-xl font-bold text-gray-800 mb-3">
+              <h4 className="text-lg md:text-xl font-bold text-[rgba(42,50,132,1)] mb-3">
                 Our Approach
               </h4>
               <p className="text-gray-600 text-sm md:text-base">
@@ -267,7 +267,7 @@ const AboutUs = () => {
       </div>
 
       {/* Footer */}
-      <div className="bg-blue-950 text-white w-full">
+      <div className="bg-[rgba(42,50,132,1)] text-white w-full">
         <div className="container mx-auto py-12 md:py-[5vh] px-4 sm:px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Get Started?

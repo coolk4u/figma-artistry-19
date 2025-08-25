@@ -17,30 +17,30 @@ const OurTeam = () => {
       image: pic2,
       bio: "18+ years transforming enterprises with Salesforce, Oracle CX, CPQ & ServiceNow. Led 60+ projects, mentored 50+ professionals, and driven $M+ deals. Digital transformation leader delivering seamless integrations, strategic growth, and unmatched client success."
     },
-    {
-      name: "Michael Chen",
-      role: "Head of Consulting",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80",
-      bio: "Strategic consultant with expertise in business process optimization and change management."
-    },
-    {
-      name: "Emily Davis",
-      role: "Lead Developer",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-      bio: "Certified Salesforce developer with expertise in Lightning Web Components and Apex."
-    },
-    {
-      name: "David Wilson",
-      role: "Solution Architect",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80",
-      bio: "Enterprise architect focusing on scalable Salesforce solutions and system integrations."
-    },
-    {
-      name: "Lisa Brown",
-      role: "Training Manager",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80",
-      bio: "Salesforce trainer and change management specialist with a passion for user adoption."
-    }
+    // {
+    //   name: "Michael Chen",
+    //   role: "Head of Consulting",
+    //   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80",
+    //   bio: "Strategic consultant with expertise in business process optimization and change management."
+    // },
+    // {
+    //   name: "Emily Davis",
+    //   role: "Lead Developer",
+    //   image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    //   bio: "Certified Salesforce developer with expertise in Lightning Web Components and Apex."
+    // },
+    // {
+    //   name: "David Wilson",
+    //   role: "Solution Architect",
+    //   image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80",
+    //   bio: "Enterprise architect focusing on scalable Salesforce solutions and system integrations."
+    // },
+    // {
+    //   name: "Lisa Brown",
+    //   role: "Training Manager",
+    //   image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80",
+    //   bio: "Salesforce trainer and change management specialist with a passion for user adoption."
+    // }
   ];
 
   return (
@@ -52,7 +52,7 @@ const OurTeam = () => {
         <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-12 md:py-20 bg-gradient-to-br from-white to-blue-200">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 text-gray-800">Our Team</h1>
-            <h2 className="text-xl sm:text-2xl text-blue-600 mb-4 md:mb-6">Meet the Experts Behind Your Success</h2>
+            <h2 className="text-xl sm:text-2xl text-[rgba(42,50,132,1)] mb-4 md:mb-6">Meet the Experts Behind Your Success</h2>
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto px-4">
               Our team of certified Salesforce professionals brings together decades of experience in cloud technology, business transformation, and customer success.
             </p>
@@ -74,7 +74,7 @@ const OurTeam = () => {
                 />
                 <div className="p-4 sm:p-6 w-full">
                   <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-1 sm:mb-2">{member.name}</h3>
-                  <p className="text-blue-600 font-medium mb-2 sm:mb-3 text-sm sm:text-base">{member.role}</p>
+                  <p className="text-[rgba(42,50,132,1)] font-medium mb-2 sm:mb-3 text-sm sm:text-base">{member.role}</p>
                   <p className="text-gray-600 text-sm sm:text-base">{member.bio}</p>
                 </div>
               </div>
@@ -84,7 +84,7 @@ const OurTeam = () => {
       </div>
       
       {/* Footer */}
-      <div className="bg-blue-950 text-white w-full">
+      <div className="bg-[rgba(42,50,132,1)] text-white w-full">
         <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16 text-center">
           <div className="pt-2 md:pt-5">
             <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Ready to Get Started?</h2>

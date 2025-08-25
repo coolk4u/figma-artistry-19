@@ -41,7 +41,7 @@ const Consulting = () => {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
                   <span className="text-gray-800">Consulting</span>
                 </h1>
-                <h2 className="text-xl sm:text-2xl text-blue-600 mb-4 md:mb-6">
+                <h2 className="text-xl sm:text-2xl text-[rgba(42,50,132,1)] mb-4 md:mb-6">
                   Strategic Salesforce Guidance
                 </h2>
                 <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -67,7 +67,7 @@ const Consulting = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 md:mb-12">
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-4 sm:p-6">
-                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[rgba(42,50,132,1)]">
                   Business Process Optimization
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm">
@@ -78,7 +78,7 @@ const Consulting = () => {
 
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-4 sm:p-6">
-                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[rgba(42,50,132,1)]">
                   Salesforce Cloud Advisory
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm">
@@ -89,7 +89,7 @@ const Consulting = () => {
 
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-4 sm:p-6">
-                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[rgba(42,50,132,1)]">
                   Change Management
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm">
@@ -100,7 +100,7 @@ const Consulting = () => {
 
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-4 sm:p-6">
-                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[rgba(42,50,132,1)]">
                   Salesforce Integration
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm">
@@ -114,7 +114,7 @@ const Consulting = () => {
           <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-[rgba(42,50,132,1)]">
                   Consulting Services
                 </h3>
                 <ul className="space-y-2 sm:space-y-3 text-gray-600 text-sm sm:text-base">
@@ -128,7 +128,7 @@ const Consulting = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Strategic Value</h3>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-[rgba(42,50,132,1)]">Strategic Value</h3>
                 <p className="text-gray-600 leading-relaxed text-sm sm:text-base mb-3 sm:mb-4">
                   Our consulting services provide the strategic foundation for
                   successful Salesforce implementations. We work closely with
@@ -147,8 +147,8 @@ const Consulting = () => {
       </div>
 
       {/* Footer */}
-      <div className="bg-blue-950 text-white w-full">
-        <div className="text-center bg-blue-950 p-6 sm:p-[5vh] text-white rounded-lg max-w-6xl w-[90vw] mx-auto">
+      <div className="bg-[rgba(42,50,132,1)] text-white w-full">
+        <div className="text-center bg-[rgba(42,50,132,1)] p-6 sm:p-[5vh] text-white rounded-lg max-w-6xl w-[90vw] mx-auto">
           <div className="pt-3 sm:pt-5">
             <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Ready to Get Started?</h2>
             <p className="text-base sm:text-lg mb-4 sm:mb-6">

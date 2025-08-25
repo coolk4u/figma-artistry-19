@@ -28,7 +28,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           </div>
         </div>
         
-        <h3 className="text-base sm:text-lg font-semibold text-card-foreground mb-2 sm:mb-3 group-hover:text-primary transition-colors duration-200">
+        <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 group-hover:text-primary transition-colors duration-200 text-[rgba(42,50,132,1)]">
           {title}
         </h3>
         

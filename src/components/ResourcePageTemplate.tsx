@@ -47,7 +47,7 @@ export const ResourcePageTemplate: React.FC<ResourcePageTemplateProps> = ({
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-gray-800">
                 {title}
               </h1>
-              <h2 className="text-lg sm:text-xl md:text-2xl text-blue-600 mb-3 sm:mb-4">
+              <h2 className="text-lg sm:text-xl md:text-2xl text-[rgba(42,50,132,1)] mb-3 sm:mb-4">
                 {subtitle}
               </h2>
               <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-6">
@@ -83,9 +83,9 @@ export const ResourcePageTemplate: React.FC<ResourcePageTemplateProps> = ({
                 />
                 <div className="p-5">
                   {item.date && (
-                    <p className="text-xs text-blue-600 mb-2">{item.date}</p>
+                    <p className="text-xs text-[rgba(42,50,132,1)] mb-2">{item.date}</p>
                   )}
-                  <h3 className="text-lg font-bold text-gray-800 mb-2">
+                  <h3 className="text-lg font-bold text-[rgba(42,50,132,1)] mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -93,7 +93,7 @@ export const ResourcePageTemplate: React.FC<ResourcePageTemplateProps> = ({
                   </p>
                   <button
                     onClick={item.onClick}
-                    className="text-center inline-block bg-blue-600 text-white px-4 py-1.5 rounded-full hover:bg-blue-700 transition-colors text-sm"
+                    className="text-center inline-block bg-[rgba(42,50,132,1)] text-white px-4 py-1.5 rounded-full hover:bg-blue-700 transition-colors text-sm"
                   >
                     Read More
                   </button>
@@ -105,8 +105,8 @@ export const ResourcePageTemplate: React.FC<ResourcePageTemplateProps> = ({
       </main>
 
       {/* Footer */}
-      <footer className="bg-blue-950 text-white w-full">
-        <div className="text-center bg-blue-950 p-12 text-white max-w-[1351px] w-[90vw] mx-auto">
+      <footer className="bg-[rgba(42,50,132,1)] text-white w-full">
+        <div className="text-center bg-[rgba(42,50,132,1)] p-12 text-white max-w-[1351px] w-[90vw] mx-auto">
           <div className="pt-5">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Get Started?

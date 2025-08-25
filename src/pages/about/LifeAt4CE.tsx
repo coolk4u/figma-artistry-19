@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navigation } from '@/components/Navigation';
+import pic1 from './Lifeat4CECloud/image1.jpeg'
 
 const LifeAt4CE = () => {
     const quickLinks = [
@@ -69,7 +70,7 @@ const LifeAt4CE = () => {
                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-12 md:py-20 bg-gradient-to-br from-white to-blue-200">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-800">Life at 4CE Cloud Labs</h1>
-                        <h2 className="text-xl sm:text-2xl text-blue-600 mb-6">Where Careers Flourish</h2>
+                        <h2 className="text-xl sm:text-2xl text-[rgba(42,50,132,1)] mb-6">Where Careers Flourish</h2>
                         <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
                             Join a dynamic team of Salesforce experts who are passionate about technology, innovation, and making a difference. Discover a workplace where your growth and success are our priorities.
                         </p>
@@ -80,7 +81,7 @@ const LifeAt4CE = () => {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12 md:mb-16">
                         <div className="order-2 lg:order-1">
-                            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 md:mb-6">Our Culture</h3>
+                            <h3 className="text-2xl sm:text-3xl font-bold text-[rgba(42,50,132,1)] mb-4 md:mb-6">Our Culture</h3>
                             <p className="text-gray-600 leading-relaxed mb-4 md:mb-6">
                                 At 4CE Cloud Labs, we believe that great work comes from great people. Our culture is built on collaboration, innovation, and mutual respect. We foster an environment where everyone can contribute their unique perspectives and expertise.
                             </p>
@@ -90,7 +91,7 @@ const LifeAt4CE = () => {
                         </div>
                         <div className="order-1 lg:order-2">
                             <img
-                                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80"
+                                src={pic1}
                                 alt="Team working together"
                                 className="w-full h-auto rounded-lg shadow-lg object-cover"
                             />
@@ -99,12 +100,12 @@ const LifeAt4CE = () => {
 
                     {/* Benefits Grid */}
                     <div className="mb-12 md:mb-16">
-                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 md:mb-8 text-center">Why Join Us?</h3>
+                        <h3 className="text-2xl sm:text-3xl font-bold text-[rgba(42,50,132,1)] mb-6 md:mb-8 text-center">Why Join Us?</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                             {benefits.map((benefit, index) => (
                                 <div key={index} className="bg-white rounded-lg shadow-lg p-4 md:p-6 text-center">
                                     <div className="text-3xl md:text-4xl mb-3 md:mb-4">{benefit.icon}</div>
-                                    <h4 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">{benefit.title}</h4>
+                                    <h4 className="text-lg md:text-xl font-bold text-[rgba(42,50,132,1)] mb-2 md:mb-3">{benefit.title}</h4>
                                     <p className="text-sm md:text-base text-gray-600">{benefit.description}</p>
                                 </div>
                             ))}
@@ -113,7 +114,7 @@ const LifeAt4CE = () => {
                 </div>
 
                 {/* Footer */}
-                <div className="bg-blue-950 text-white w-full">
+                <div className="bg-[rgba(42,50,132,1)] text-white w-full">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 text-center">
                         <div className="pt-3 md:pt-5">
                             <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Ready to Get Started?</h2>

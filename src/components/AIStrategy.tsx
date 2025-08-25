@@ -1,42 +1,49 @@
 import React from 'react';
+import pic6 from './Assets/AiStrategyImg/Insight-Driven Intelligence.png'
 
 export const AIStrategy: React.FC = () => {
   const aiFeatures = [
     {
-      title: "Pre-Sales Intelligence",
+      title: "Agentforce-Powered Productivity",
       icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/eba1d47822c4596a3f28d41afdf6dab86650b5f8?placeholderIfAbsent=true",
-      description: "AI helps tailor every interaction, from solutioning and demos to POCs. Content recommendations, scenario simulations, and proposal automation shape a compelling, data-backed narrative.",
-      borderColor: "#3AC2FF"
+      description: "With Agentforce, we bring the power of AI copilots directly into your workflows. From automating repetitive tasks to assisting users with contextual insights, Agentforce accelerates productivity and ensures your teams spend more time on what truly matters.",
+      borderColor: "rgba(42,50,132,1)"
     },
     {
-      title: "Insight-Driven Intelligence",
+      title: "Einstein Intelligence",
       icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/d37a3dfcc7f8e2138ef512351420ccc9f6b6fdfa?placeholderIfAbsent=true",
-      description: "By applying machine learning and predictive modelling, we translate your raw data into forward-looking strategies to uncover hidden opportunities, and make smarter decisions faster.",
-      borderColor: "#25A4DD"
+      description: "From AI-driven recommendations and predictive lead scoring to next-best-action guidance and automated knowledge suggestions, we help you harness Einstein to streamline service, empower sales, and deliver personalized customer experiences.",
+      borderColor: "rgba(42,50,132,1)"
     },
     {
-      title: "Enablement & AI Literacy",
+      title: "Smarter Decisions with Data Cloud",
       icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/bd0b711f0d7fef2501a3c9bb485fbe72e07bf5ab?placeholderIfAbsent=true",
-      description: "We empower your workforce to harness AI with confidence. Through custom training programs and change adoption initiatives, we help your teams navigate the AI landscape and unlock its full potential",
-      borderColor: "#3AC2FF"
+      description: "By unifying and activating customer data in real time, Data Cloud enables predictive intelligence at scale. We leverage its insights to anticipate customer needs, personalize experiences, and drive proactive engagement strategies that boost growth.",
+      borderColor: "rgba(42,50,132,1)"
     },
     {
       title: "Intelligent Development",
       icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/782e439b357264aa9ce5b28a3e95bac474fe39c6?placeholderIfAbsent=true",
       description: "Every development cycle is guided by tools like Agentforce for developers, Co-pilot, Builder.io in scanning and assisting to ensure aligned outcomes.",
-      borderColor: "#3AC2FF"
+      borderColor: "rgba(42,50,132,1)"
     },
     {
       title: "AI-First Quality Engineering",
       icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/2efab7705493f5da9f6934b19cf76638834112ac?placeholderIfAbsent=true",
       description: "Automated test generation, and self-healing scripts reduce defects and rework, while increasing test coverage and speed-to-market.",
-      borderColor: "#3AC2FF"
-    }
+      borderColor: "rgba(42,50,132,1)"
+    },
+      {
+      title: "Insight-Driven Intelligence",
+      icon: pic6,
+      description: "By applying machine learning and predictive modelling, we translate your raw data into forward-looking strategies to uncover hidden opportunities, and make smarter decisions faster.",
+      borderColor: "rgba(42,50,132,1)"
+    },
   ];
 
   return (
     <section className="bg-white z-10 w-full flex flex-col items-center px-4 py-10 sm:px-6 md:px-8 lg:px-20 xl:px-24">
-      <div className="flex items-center gap-2 text-[#25A4DD] font-normal">
+      <div className="flex items-center gap-2 text-[rgba(42,50,132,1)] font-normal">
         <img
           src="https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/0bf5f221ca8c27c9d4e36fade8f0809cb2db6023?placeholderIfAbsent=true"
           alt="AI Strategy icon"
@@ -60,7 +67,7 @@ export const AIStrategy: React.FC = () => {
               style={{ backgroundColor: feature.borderColor }}
             />
             <div className="bg-[#EBF9FF] p-2 mb-4">
-              <h3 className="text-[#003B55] font-medium">
+              <h3 className="text-[rgba(42,50,132,1)] font-medium">
                 {feature.title}
               </h3>
             </div>
