@@ -191,11 +191,11 @@ const CaseStudies = () => {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-800">
                 Case Studies
               </h1>
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-600 mb-3 sm:mb-4">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[rgba(42,50,132,1)] mb-3 sm:mb-4">
                 Success Stories & Client Transformations
               </h2>
               <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
-                Explore real-world examples of how 4CE Cloud Labs has helped organizations achieve their digital transformation goals through innovative Salesforce solutions.
+                Explore real-world examples of how 4CECloud Labs has helped organizations achieve their digital transformation goals through innovative Salesforce solutions.
               </p>
             </div>
 
@@ -225,7 +225,7 @@ const CaseStudies = () => {
                     className="w-full h-48 sm:h-56 object-cover"
                   />
                   <div className="p-4 sm:p-6 flex-grow flex flex-col">
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">
+                    <h3 className="text-lg sm:text-xl font-bold text-[rgba(42,50,132,1)] mb-2 sm:mb-3">
                       {caseStudy.title}
                     </h3>
                     <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6 flex-grow">
@@ -233,7 +233,7 @@ const CaseStudies = () => {
                     </p>
                     <button
                       onClick={() => handleReadMore(caseStudy)}
-                      className="w-full sm:w-auto text-center bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full hover:bg-blue-700 transition-colors text-sm sm:text-base"
+                      className="w-full sm:w-auto text-center bg-[rgba(42,50,132,1)] text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full  transition-colors text-sm sm:text-base"
                     >
                       Read More
                     </button>
@@ -246,7 +246,7 @@ const CaseStudies = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-blue-950 text-white w-full">
+      <footer className="bg-[rgba(42,50,132,1)] text-white w-full">
         <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12">
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">

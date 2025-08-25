@@ -15,12 +15,12 @@ export const SalesforceServices: React.FC = () => {
     {
       icon: "https://api.builder.io/api/v1/image/assets/31c2f38103a243b790a72ee5624ef9ba/b173e7e88916f8015bb149153a053e6ca3aa8d35?placeholderIfAbsent=true",
       title: "Support & Managed Services",
-      description: "Delivering tailored Salesforce rollouts with speed, scale, and strategic fit."
+      description: "Delivering seamless issue resolution and user assistance to proactive enhancements"
     },
     {
       icon: "https://cdn-icons-png.flaticon.com/512/1055/1055683.png",
       title: "Proven Business Transformation",
-      description: "18+ years delivering measurable business value through digital transformation expertise"
+      description: "18+ years of delivering measurable business value through digital transformation expertise"
     }
   ];
 

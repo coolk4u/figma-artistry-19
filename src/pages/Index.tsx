@@ -72,7 +72,7 @@ const Index = () => {
         </div>
 
         {/* Salesforce Services Icons Section - Responsive */}
-        <div className="container mx-auto px-4 py-8 md:py-12">
+        {/* <div className="container mx-auto px-4 py-8 md:py-12">
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-6">
             {salesforceServices.map((service, index) => (
               <div
@@ -93,7 +93,7 @@ const Index = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </main>
       <Footer />
     </div>
