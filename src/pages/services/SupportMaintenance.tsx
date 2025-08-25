@@ -41,7 +41,7 @@ const SupportMaintenance = () => {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
                   <span className="text-gray-800">Maintenance and Support</span>
                 </h1>
-                <h2 className="text-xl sm:text-2xl text-blue-600 mb-4 md:mb-6">
+                <h2 className="text-xl sm:text-2xl text-[rgba(42,50,132,1)] mb-4 md:mb-6">
                   Ongoing Salesforce Excellence
                 </h2>
                 <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -67,7 +67,7 @@ const SupportMaintenance = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 md:mb-12">
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-4 sm:p-6">
-                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[rgba(42,50,132,1)]">
                   Proactive Monitoring
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm">
@@ -78,7 +78,7 @@ const SupportMaintenance = () => {
 
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-4 sm:p-6">
-                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[rgba(42,50,132,1)]">
                   Release Management
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm">
@@ -89,7 +89,7 @@ const SupportMaintenance = () => {
 
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-4 sm:p-6">
-                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[rgba(42,50,132,1)]">
                   User Support
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm">
@@ -100,7 +100,7 @@ const SupportMaintenance = () => {
 
             <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-4 sm:p-6">
-                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[rgba(42,50,132,1)]">
                   Custom Functionality
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm">
@@ -114,7 +114,7 @@ const SupportMaintenance = () => {
           <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-[rgba(42,50,132,1)]">
                   Support Services
                 </h3>
                 <ul className="space-y-2 sm:space-y-3 text-gray-600 text-sm sm:text-base">
@@ -131,7 +131,7 @@ const SupportMaintenance = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-[rgba(42,50,132,1)]">
                   Service Excellence
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-sm sm:text-base mb-3 sm:mb-4">
@@ -153,8 +153,8 @@ const SupportMaintenance = () => {
       </div>
 
       {/* Footer */}
-      <div className="bg-blue-950 text-white w-full">
-        <div className="text-center bg-blue-950 p-6 sm:p-[5vh] text-white rounded-lg max-w-6xl w-[90vw] mx-auto">
+      <div className="bg-[rgba(42,50,132,1)] text-white w-full">
+        <div className="text-center bg-[rgba(42,50,132,1)] p-6 sm:p-[5vh] text-white rounded-lg max-w-6xl w-[90vw] mx-auto">
           <div className="pt-3 sm:pt-5">
             <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
               Ready to Get Started?

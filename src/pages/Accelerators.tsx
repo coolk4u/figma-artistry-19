@@ -94,7 +94,7 @@ const Accelerators = () => {
               <div className="text-center lg:text-left order-last lg:order-first">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
                   <span className="text-gray-800">Accelerators and </span>
-                  <span className="text-blue-500">App Solutions</span>
+                  <span className="text-[rgba(42,50,132,1)]">App Solutions</span>
                 </h1>
                 <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   We leverage our in-house built accelerators and frameworks,
@@ -117,7 +117,7 @@ const Accelerators = () => {
         {/* Main Content */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-3 md:mb-4 underline">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[rgba(42,50,132,1)] mb-3 md:mb-4 underline">
               Accelerators
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto">
@@ -135,12 +135,12 @@ const Accelerators = () => {
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className="bg-gradient-to-r from-blue-400 to-blue-600 h-2"></div>
+                <div className="bg-gradient-to-r from-blue-800 to-blue-600 h-2"></div>
                 <div className="p-4 sm:p-6">
                   <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 text-center">
                     {accelerator.icon}
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-[rgba(42,50,132,1)] mb-2 sm:mb-3">
                     {accelerator.title}
                   </h3>
                   <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">
@@ -166,7 +166,7 @@ const Accelerators = () => {
 
                   <button
                     onClick={() => openModal(accelerator)}
-                    className="w-full bg-blue-500 text-white py-1 sm:py-2 rounded-full hover:bg-blue-600 transition-colors text-xs sm:text-sm"
+                    className="w-full bg-[rgba(42,50,132,1)] text-white py-1 sm:py-2 rounded-full transition-colors text-xs sm:text-sm"
                   >
                     More Features
                   </button>
@@ -181,14 +181,14 @@ const Accelerators = () => {
       {isModalOpen && selectedAccelerator && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg shadow-xl w-full max-w-4xl lg:max-w-5xl max-h-[90vh] overflow-y-auto">
-            <div className="bg-gradient-to-r from-blue-400 to-blue-600 h-2"></div>
+            <div className="bg-gradient-to-r from-blue-900 to-blue-600 h-2"></div>
             <div className="p-4 sm:p-6">
               <div className="flex justify-between items-start mb-3 sm:mb-4">
                 <div className="flex items-center">
                   <div className="text-3xl sm:text-4xl mr-3 sm:mr-4">
                     {selectedAccelerator.icon}
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[rgba(42,50,132,1)]">
                     {selectedAccelerator.title}
                   </h3>
                 </div>
@@ -230,7 +230,7 @@ const Accelerators = () => {
                   </div>
 
                   <div className="mb-4 sm:mb-6">
-                    <h4 className="font-semibold text-gray-800 text-sm sm:text-base md:text-lg mb-2 sm:mb-3">
+                    <h4 className="font-semibold text-[rgba(42,50,132,1)] text-sm sm:text-base md:text-lg mb-2 sm:mb-3">
                       Detailed Features
                     </h4>
                     <ul className="space-y-1 sm:space-y-2">
@@ -259,7 +259,7 @@ const Accelerators = () => {
 
               <button
                 onClick={closeModal}
-                className="w-full mt-4 sm:mt-6 bg-blue-500 text-white py-1 sm:py-2 rounded-full hover:bg-blue-600 transition-colors text-sm sm:text-base"
+                className="w-full mt-4 sm:mt-6 bg-[rgba(42,50,132,1)] text-white py-1 sm:py-2 rounded-full transition-colors text-sm sm:text-base"
               >
                 Close
               </button>

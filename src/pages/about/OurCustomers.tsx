@@ -63,7 +63,7 @@ const OurCustomers = () => {
         <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-12 md:py-20 bg-gradient-to-br from-white to-blue-200">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-800">Our Customers</h1>
-            <h2 className="text-xl sm:text-2xl text-blue-600 mb-6">Trusted by Industry Leaders</h2>
+            <h2 className="text-xl sm:text-2xl text-[rgba(42,50,132,1)] mb-6">Trusted by Industry Leaders</h2>
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
               We're proud to partner with organizations across various industries, helping them achieve their digital transformation goals through innovative Salesforce solutions.
             </p>
@@ -83,7 +83,7 @@ const OurCustomers = () => {
                   />
                   <div>
                     <h3 className="text-lg sm:text-xl md:text-xl font-bold text-gray-800">{customer.name}</h3>
-                    <p className="text-blue-600 text-sm md:text-base">{customer.industry}</p>
+                    <p className="text-[rgba(42,50,132,1)] text-sm md:text-base">{customer.industry}</p>
                   </div>
                 </div>
                 <p className="text-gray-600 italic text-sm md:text-base">"{customer.testimonial}"</p>
@@ -92,7 +92,7 @@ const OurCustomers = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="mt-12 md:mt-16 bg-blue-600 rounded-lg p-6 md:p-8 text-white">
+          <div className="mt-12 md:mt-16 bg-[rgba(42,50,132,1)] rounded-lg p-6 md:p-8 text-white">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
               <div className="p-2 md:p-0">
                 <h3 className="text-2xl sm:text-3xl font-bold mb-1 md:mb-2">200+</h3>
@@ -116,8 +116,8 @@ const OurCustomers = () => {
       </div>
       
       {/* Footer */}
-      <div className="bg-blue-950 text-white w-full">
-        <div className="text-center bg-blue-950 py-8 md:py-[5vh] px-4 sm:px-6 text-white rounded-lg max-w-[1351px] w-[90vw] mx-auto">
+      <div className="bg-[rgba(42,50,132,1)] text-white w-full">
+        <div className="text-center bg-[rgba(42,50,132,1)] py-8 md:py-[5vh] px-4 sm:px-6 text-white rounded-lg max-w-[1351px] w-[90vw] mx-auto">
           <div className="pt-3 md:pt-5">
             <h2 className="text-2xl sm:text-3xl font-bold mb-3 md:mb-4">Ready to Get Started?</h2>
             <p className="text-base sm:text-lg mb-4 md:mb-6">
